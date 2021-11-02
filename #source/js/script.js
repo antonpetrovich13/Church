@@ -1,5 +1,7 @@
+/*
+
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
-const animItems = document.querySelectorAll('._anim-items');
+ const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll);
@@ -220,3 +222,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
 	}
 });
+
+*/
