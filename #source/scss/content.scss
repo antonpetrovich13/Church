@@ -1,5 +1,7 @@
 // <MAIN> ===============================
 .main {
+	position: relative;
+	z-index: 1;
 	background-color: #242321;
 	height: 100vh;
 	width: 100%;
@@ -19,6 +21,63 @@
 		flex: 0 1 1000px;
 		& img {
 			max-width: 100%;
+		}
+	}
+}
+
+// <ABOUT> ===============================
+.about {
+	padding: 0px 0px 60px 0px;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		//margin: 0px -20px;
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		//padding: 0px 20px;
+	}
+
+	&__body {
+		//text-align: right;
+		/*max-width: 600px;
+		margin: 0px auto;*/
+	}
+
+	&__title {
+		font-size: 36px;
+		& span {
+			font-size: 23px;
+		}
+	}
+
+	&__subtitle {
+		margin: 41px 0px 0px 0px;
+		font-size: 23px;
+		line-height: 30px;
+	}
+
+	&__photos {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__image {
+		flex: 0 1 309px;
+		& img {
+			max-width: 100%;
+		}
+		&_1 {
+			transform: translate(0, -25%);
+			//margin: -20% 0px 0px 0px;
+		}
+
+		&_2 {
+			transform: translate(0, 35%);
+			//margin: 30% 0px 0px 0px;
 		}
 	}
 }
