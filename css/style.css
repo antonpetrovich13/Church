@@ -92,7 +92,12 @@ body {
 
 .header {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  /*&__wrapper._active {
+		&:before {
+			background-color: #3a3a36;
+		}
+	}*/ }
   .header__wrapper {
     padding: 0 50px;
     position: relative;
@@ -114,7 +119,7 @@ body {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: #3a3a36; }
+      background-color: #242321; }
   .header__logo {
     position: relative;
     max-width: 340px;
@@ -252,7 +257,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #242321;
+      background-color: #1b1919;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -281,3 +286,35 @@ body {
       font-size: 13px;
       max-width: 250px;
       line-height: 19px; } }
+
+.main {
+  background-color: #242321;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .main__body {
+    padding: 0px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .main__image {
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 1000px;
+    flex: 0 1 1000px; }
+    .main__image img {
+      max-width: 100%; }
