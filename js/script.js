@@ -13,6 +13,7 @@ function burgerRun() {
 burger.addEventListener("click", burgerRun);
 
 
+
 // ОТСТУП РАСКРЫТОГО НА УСТРОЙСТВАХ < 900PX МЕНЮ ОТ ПЛАШКИ ШАПКИ
 
 let headerWrapper = document.querySelector('.header__wrapper');
@@ -20,3 +21,10 @@ let headerWrapper = document.querySelector('.header__wrapper');
 if ((document.documentElement.offsetWidth < 900) && (document.documentElement.offsetHeight < 300)) {
 	menu.firstElementChild.style.paddingTop = headerWrapper.offsetHeight + 'px';
 }
+
+//ПОЯВЛЕНИЕ ПЛАШКИ ПРИ СКРОЛЛЕ
+/*const head = document.querySelector('.header__wrapper');
+
+if (document.documentElement.scrollTop > 100) {
+	head.classList.add('_active')
+}*/
