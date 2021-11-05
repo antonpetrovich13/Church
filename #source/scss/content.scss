@@ -28,7 +28,6 @@
 // <ABOUT> ===============================
 .about {
 	padding: 0px 0px 60px 0px;
-
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -78,7 +77,7 @@
 		}
 
 		&_2 {
-			transform: translate(0, 35%);
+			transform: translate(0, 38%);
 		}
 	}
 
@@ -127,6 +126,7 @@
 	@media (max-width: 970px) {
 		&__column {
 			&_1 {
+				margin: 70px 0px 0px 0px;
 				flex: 0 1 60%;
 				justify-content: center;
 			}
@@ -137,6 +137,7 @@
 		}
 	}
 	@media (max-width: 810px) {
+		padding: 0px 0px 30px 0px;
 		&__wrapper {
 			align-items: stretch;
 			margin: 0px -10px;
@@ -145,7 +146,7 @@
 			padding: 0px 10px;
 			&_1 {
 				flex: 0 1 70%;
-				margin: 70px 0px 0px 0px;
+				margin: 90px 0px 0px 0px;
 			}
 			&_2 {
 				flex: 0 1 30%;
@@ -225,6 +226,198 @@
 				display: none;
 				visibility: hidden;
 			}
+		}
+	}
+}
+
+// <SCHEDULE> ===============================
+.schedule {
+	position: relative;
+	z-index: 1;
+	padding: 100px 0px 0px 0px;
+	background-color: #242321;
+	clip-path: polygon(0% 10%, 53% 10%, 100% 0%, 100% 90%, 66.5% 100%, 0% 100%);
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		margin: 0px -49px;
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 49px;
+	}
+
+	&__body {
+		margin: 104px 0px 0px 0px;
+		text-align: center;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 22px;
+		letter-spacing: 5px;
+		color: #fff;
+		margin: 0px 0px 35.7px 0px;
+	}
+
+	&__list {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 75px;
+			top: 3px;
+			left: 110px;
+			background-color: #fff;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 136px;
+			height: 2px;
+			bottom: -45px;
+			left: 50%;
+			background-color: #fff;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	&__point {
+		margin: 20px 0px 0px 0px;
+		font-size: 25px;
+		color: #fff;
+		&:first-child {
+			margin: 0px 0px 0px 0px;
+			position: relative;
+		}
+		& span {
+			margin: 0px 0px 0px 10px;
+		}
+	}
+
+	&__photo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 65px 0px 0px 0px;
+	}
+
+	&__image {
+		flex: 0 1 450px;
+		& img {
+			max-width: 100%;
+		}
+	}
+	@media (max-width: 1150px) {
+		clip-path: polygon(0% 10%, 53% 10%, 100% 0%, 100% 90%, 75% 100%, 0% 100%);
+		&__image {
+			flex: 0 1 350px;
+		}
+		&__body {
+			margin: 44px 0px 0px 0px;
+			text-align: center;
+		}
+		&__list {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1000px) {
+		clip-path: polygon(0% 10%, 53% 10%, 100% 0%, 100% 90%, 66.5% 100%, 0% 100%);
+		&__wrapper {
+			margin: 0px -20px;
+		}
+		&__column {
+			padding: 0px 30px;
+		}
+		&__body {
+			margin: 24px 0px 0px 0px;
+		}
+		&__photo {
+			justify-content: flex-start;
+			margin: 80px 0px 0px 0px;
+		}
+		&__image {
+			flex: 0 1 300px;
+		}
+	}
+	@media (max-width: 900px) {
+		&__title {
+			letter-spacing: 3px;
+		}
+	}
+	@media (max-width: 850px) {
+		clip-path: polygon(0% 10%, 53% 10%, 100% 0%, 100% 90%, 72% 100%, 0% 100%);
+		&__photo {
+			margin: 110px 0px 0px 0px;
+			justify-content: center;
+		}
+		&__image {
+			flex: 0 1 250px;
+		}
+		&__title {
+			font-size: 20px;
+			margin: 0px 0px 30px 0px;
+		}
+		&__list {
+			&:after {
+				width: 113px;
+				bottom: -25px;
+			}
+		}
+		&__point {
+			margin: 15px 0px 0px 0px;
+			font-size: 23px;
+			color: #fff;
+			& span {
+				margin: 0px 0px 0px 7px;
+			}
+		}
+	}
+	@media (max-width: 750px) {
+		&__title {
+			line-height: 28px;
+			letter-spacing: 5px;
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	@media (max-width: 620px) {
+		padding: 90px 0px 0px 0px;
+		clip-path: polygon(0% 10%, 53% 10%, 100% 0%, 100% 90%, 70% 100%, 0% 100%);
+		&__wrapper {
+			margin: 0px -5px;
+		}
+		&__column {
+			padding: 0px 5px;
+		}
+		&__body {
+			margin: 0px 0px 0px 0px;
+		}
+		&__photo {
+			margin: 130px 0px 0px 0px;
+		}
+		&__image {
+			flex: 0 1 200px;
+		}
+	}
+	@media (max-width: 500px) {
+		&__wrapper {
+			flex-wrap: wrap;
+			margin: 0px;
+		}
+		&__column {
+			padding: 0px;
+			flex: 0 1 100%;
+		}
+		&__body {
+			padding: 0px 0px 70px 0px;
+		}
+		&__photo {
+			display: none;
 		}
 	}
 }
