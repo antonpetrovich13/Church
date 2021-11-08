@@ -421,3 +421,152 @@
 		}
 	}
 }
+
+// <LIFE> ===============================
+.life {
+	margin: 13px 0px 0px 0px;
+	background-color: #242321;
+	padding: 142px 0px 91px 0px;
+	text-align: center;
+	clip-path: polygon(0% 9%, 35% 10%, 70% 9%, 100% 1%, 100% 98%, 60% 100%, 40% 90%, 20% 92%, 0% 100%);
+
+	&__wrapper {
+		position: relative;
+		text-align: center;
+		//border: 1px solid #000;
+		padding: 85px 0px 111px 0px;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 75px;
+			top: 0;
+			right: 0;
+			background-color: #f3ebeb;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 1px;
+			height: 75px;
+			top: 60%;
+			left: 0;
+			background-color: #f3ebeb;
+		}
+		& span {
+			position: absolute;
+			width: 1px;
+			height: 75px;
+			bottom: 0;
+			right: 10%;
+			background-color: #f3ebeb;
+		}
+	}
+
+	&__title {
+		color: #f3ebeb;
+		font-family: "Montserrat Alternates";
+		font-weight: 600;
+		font-size: 40px;
+	}
+
+	&__body {
+		margin: 70px 0px 0px 0px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 73px;
+			height: 2px;
+			bottom: -65px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			background-color: #f3ebeb;
+		}
+	}
+
+	&__wrap {
+		margin: 35px 0px 0px 0px;
+		&:first-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		font-family: "Montserrat Alternates";
+		font-size: 20px;
+		color: #f3ebeb;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			top: 50%;
+			left: 0;
+			background-color: #f3ebeb;
+			transition: all 0.3s ease 0s;
+			opacity: 0;
+		}
+		&:hover:before {
+			top: 100%;
+			opacity: 1;
+		}
+	}
+
+	&__botton {
+		margin: 162px 0px 0px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__text {
+		font-family: "Montserrat Alternates";
+		font-weight: 500;
+		font-size: 30px;
+		letter-spacing: 0.03em;
+		text-transform: lowercase;
+		color: #f3ebeb;
+		margin: 0px 52px 0px 0px;
+	}
+
+	&__button {
+		position: relative;
+		display: block;
+		width: 165px;
+		height: 50px;
+		background-color: #fffefee5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		overflow: hidden;
+		& p {
+			font-family: "Montserrat Alternates";
+			font-weight: 500;
+			font-size: 20px;
+			color: #000000;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease 0s;
+		}
+		& span {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: -100%;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.486);
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			& span {
+				top: 0;
+			}
+			& p {
+				color: #f3ebeb;
+			}
+		}
+	}
+}

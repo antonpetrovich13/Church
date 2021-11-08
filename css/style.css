@@ -91,6 +91,11 @@ body {
   margin: 0px auto;
   padding: 0px 15px; }
 
+.container-2 {
+  max-width: 1300px;
+  margin: 0px auto;
+  padding: 0px 15px; }
+
 .header {
   position: fixed;
   z-index: 2;
@@ -695,3 +700,141 @@ body {
       padding: 0px 0px 70px 0px; }
     .schedule__photo {
       display: none; } }
+
+.life {
+  margin: 13px 0px 0px 0px;
+  background-color: #242321;
+  padding: 142px 0px 91px 0px;
+  text-align: center;
+  -webkit-clip-path: polygon(0% 9%, 35% 10%, 70% 9%, 100% 1%, 100% 98%, 60% 100%, 40% 90%, 20% 92%, 0% 100%);
+  clip-path: polygon(0% 9%, 35% 10%, 70% 9%, 100% 1%, 100% 98%, 60% 100%, 40% 90%, 20% 92%, 0% 100%); }
+  .life__wrapper {
+    position: relative;
+    text-align: center;
+    padding: 85px 0px 111px 0px; }
+    .life__wrapper:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 75px;
+      top: 0;
+      right: 0;
+      background-color: #f3ebeb; }
+    .life__wrapper:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 75px;
+      top: 60%;
+      left: 0;
+      background-color: #f3ebeb; }
+    .life__wrapper span {
+      position: absolute;
+      width: 1px;
+      height: 75px;
+      bottom: 0;
+      right: 10%;
+      background-color: #f3ebeb; }
+  .life__title {
+    color: #f3ebeb;
+    font-family: "Montserrat Alternates";
+    font-weight: 600;
+    font-size: 40px; }
+  .life__body {
+    margin: 70px 0px 0px 0px;
+    position: relative; }
+    .life__body:after {
+      content: "";
+      position: absolute;
+      width: 73px;
+      height: 2px;
+      bottom: -65px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      background-color: #f3ebeb; }
+  .life__wrap {
+    margin: 35px 0px 0px 0px; }
+    .life__wrap:first-child {
+      margin: 0px 0px 0px 0px; }
+  .life__link {
+    position: relative;
+    font-family: "Montserrat Alternates";
+    font-size: 20px;
+    color: #f3ebeb; }
+    .life__link:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 50%;
+      left: 0;
+      background-color: #f3ebeb;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      opacity: 0; }
+    .life__link:hover:before {
+      top: 100%;
+      opacity: 1; }
+  .life__botton {
+    margin: 162px 0px 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .life__text {
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+    color: #f3ebeb;
+    margin: 0px 52px 0px 0px; }
+  .life__button {
+    position: relative;
+    display: block;
+    width: 165px;
+    height: 50px;
+    background-color: #fffefee5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden; }
+    .life__button p {
+      font-family: "Montserrat Alternates";
+      font-weight: 500;
+      font-size: 20px;
+      color: #000000;
+      position: relative;
+      z-index: 1;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    .life__button span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.486);
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    .life__button:hover span {
+      top: 0; }
+    .life__button:hover p {
+      color: #f3ebeb; }
