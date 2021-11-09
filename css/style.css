@@ -719,7 +719,9 @@ body {
       height: 75px;
       top: 0;
       right: 0;
-      background-color: #f3ebeb; }
+      background-color: #f3ebeb;
+      -webkit-animation: line-right 3s linear infinite alternate;
+      animation: line-right 3s linear infinite alternate; }
     .life__wrapper:after {
       content: "";
       position: absolute;
@@ -727,14 +729,55 @@ body {
       height: 75px;
       top: 60%;
       left: 0;
-      background-color: #f3ebeb; }
+      background-color: #f3ebeb;
+      -webkit-animation: line-left 3s linear infinite alternate;
+      animation: line-left 3s linear infinite alternate; }
     .life__wrapper span {
+      display: block;
       position: absolute;
       width: 1px;
       height: 75px;
       bottom: 0;
       right: 10%;
-      background-color: #f3ebeb; }
+      background-color: #f3ebeb;
+      -webkit-animation: line-botton 4s linear infinite alternate 1s;
+      animation: line-botton 4s linear infinite alternate 1s; }
+
+@-webkit-keyframes line-right {
+  0% {
+    top: 10%; }
+  100% {
+    top: 0%; } }
+
+@keyframes line-right {
+  0% {
+    top: 10%; }
+  100% {
+    top: 0%; } }
+
+@-webkit-keyframes line-left {
+  0% {
+    top: 45%; }
+  100% {
+    top: 55%; } }
+
+@keyframes line-left {
+  0% {
+    top: 45%; }
+  100% {
+    top: 55%; } }
+
+@-webkit-keyframes line-botton {
+  0% {
+    bottom: 0%; }
+  100% {
+    bottom: 10%; } }
+
+@keyframes line-botton {
+  0% {
+    bottom: 0%; }
+  100% {
+    bottom: 10%; } }
   .life__title {
     color: #f3ebeb;
     font-family: "Montserrat Alternates";
@@ -838,3 +881,109 @@ body {
       top: 0; }
     .life__button:hover p {
       color: #f3ebeb; }
+  @media (max-width: 1440px) {
+    .life .container-2 {
+      max-width: 1000px; }
+    .life .life__wrapper span {
+      right: 5%; } }
+  @media (max-width: 1150px) {
+    .life {
+      padding: 70px 0px 91px 0px; } }
+  @media (max-width: 1050px) {
+    .life {
+      -webkit-clip-path: polygon(0% 9%, 35% 9%, 70% 9%, 100% 0%, 100% 98%, 60% 100%, 40% 90%, 20% 92%, 0% 100%);
+      clip-path: polygon(0% 9%, 35% 9%, 70% 9%, 100% 0%, 100% 98%, 60% 100%, 40% 90%, 20% 92%, 0% 100%); }
+      .life .container-2 {
+        max-width: 800px; }
+      .life__wrapper::before, .life__wrapper::after {
+        height: 60px; }
+      .life__wrapper span {
+        display: none; } }
+  @media (max-width: 870px) {
+    .life {
+      padding: 50px 0px 10px 0px; }
+      .life__wrapper:before {
+        top: 5%; }
+      .life__title {
+        font-size: 32px; }
+      .life__body {
+        margin: 50px 0px 0px 0px; }
+        .life__body:after {
+          bottom: -55px; }
+      .life__wrap {
+        margin: 27px 0px 0px 0px; }
+      .life__link {
+        font-size: 18px; }
+      .life__botton {
+        margin: 102px 0px 0px 0px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .life__text {
+        font-size: 24px;
+        margin: 0px 0px 25px 0px; }
+      .life__button {
+        width: 115px;
+        height: 40px; }
+      .life .container-2 {
+        max-width: 620px; } }
+  @media (max-width: 700px) {
+    .life {
+      padding: 25px 0px 0px 0px; }
+      .life__wrapper::before, .life__wrapper::after {
+        display: none; } }
+  @media (max-width: 500px) {
+    .life {
+      padding: 15px 0px 0px 0px; }
+      .life__wrapper {
+        padding: 75px 0px 90px 0px; }
+      .life__title {
+        font-size: 26px; }
+      .life__body {
+        margin: 40px 0px 0px 0px; }
+        .life__body:after {
+          bottom: -50px; }
+      .life__wrap {
+        margin: 24px 0px 0px 0px; }
+      .life__link {
+        font-size: 16px; }
+      .life__botton {
+        margin: 92px 0px 0px 0px; }
+      .life__text {
+        font-size: 20px;
+        margin: 0px 0px 25px 0px; }
+      .life__button {
+        width: 95px;
+        height: 35px; }
+        .life__button p {
+          font-size: 18px; } }
+  @media (max-width: 360px) {
+    .life__title {
+      font-size: 24px; }
+    .life__body {
+      margin: 35px 0px 0px 0px; }
+      .life__body:after {
+        bottom: -45px; }
+    .life__wrap {
+      margin: 20px 0px 0px 0px; }
+    .life__link {
+      line-height: 24px; }
+    .life__botton {
+      margin: 87px 0px 0px 0px; }
+    .life__text {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0px 0px 17px 0px; }
+    .life__button {
+      width: 85px;
+      height: 33px; }
+      .life__button p {
+        font-size: 18px; } }
+
+.pleasure {
+  margin: -95px 0px 0px 0px;
+  background: url("../img/pleasure/01.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%; }
