@@ -424,6 +424,8 @@
 
 // <LIFE> ===============================
 .life {
+	position: relative;
+	z-index: 2;
 	margin: 13px 0px 0px 0px;
 	background-color: #242321;
 	padding: 142px 0px 91px 0px;
@@ -745,9 +747,150 @@
 
 // <PLEASURE> ===============================
 .pleasure {
-	margin: -95px 0px 0px 0px;
-	background: url("../img/pleasure/01.png") 0 0 no-repeat;
-	background-size: cover;
-	height: 600px;
-	width: 100%;
+	margin: -90px 0px 0px 0px;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__imagine {
+		position: relative;
+		flex: 0 1 55%;
+		display: flex;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to right, #f0ece809 55%, #f0ece8fb 70%, #f0ece8 100%);
+			z-index: 1;
+		}
+	}
+
+	&__picture {
+		height: 800px;
+		width: 684px;
+	}
+
+	&__main {
+		text-align: center;
+	}
+
+	&__text {
+		max-width: 450px;
+	}
+
+	&__title {
+		margin: 0px 0px 35px 0px;
+		font-weight: 700;
+		font-size: 36px;
+		color: #000000;
+		text-align: left;
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 37px;
+		text-align: left;
+	}
+
+	@media (max-width: 1170px) {
+		margin: -80px 0px 0px 0px;
+		&__imagine {
+			&:before {
+				background: linear-gradient(to right, #f0ece809 50%, #f0ece8fb 75%, #f0ece8 100%);
+			}
+		}
+		&__picture {
+			height: 580px;
+			width: 484px;
+		}
+		&__main {
+			margin: 50px 0px 0px 0px;
+		}
+		&__text {
+			max-width: 350px;
+		}
+		&__title {
+			margin: 0px 0px 20px 0px;
+			font-size: 32px;
+		}
+
+		&__subtitle {
+			font-size: 22px;
+			line-height: 32px;
+		}
+	}
+	@media (max-width: 880px) {
+		&__imagine {
+			&:before {
+				background: linear-gradient(to right, #f0ece809 40%, #f0ece8fb 70%, #f0ece8 100%);
+			}
+		}
+		&__picture {
+			height: 480px;
+			width: 384px;
+		}
+
+		&__text {
+			max-width: 300px;
+		}
+
+		&__title {
+			margin: 0px 0px 15px 0px;
+			font-size: 28px;
+		}
+
+		&__subtitle {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+	@media (max-width: 700px) {
+		&__imagine {
+			flex: 0 1 50%;
+		}
+		&__picture {
+			height: 480px;
+			width: 300px;
+		}
+	}
+	@media (max-width: 615px) {
+		&__wrapper {
+			position: relative;
+			display: block;
+		}
+		&__imagine {
+			&:before {
+				background: linear-gradient(to bottom, #f0ece809 0%, #c9c7c683 45%, #f0ece8 100%);
+			}
+		}
+		&__picture {
+			min-height: 100%;
+			min-width: 100%;
+		}
+		&__main {
+			position: absolute;
+			margin: 20px 0px 0px 0px;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			text-align: center;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__title {
+			color: #242321;
+		}
+		&__title,
+		&__subtitle {
+			text-align: center;
+		}
+	}
 }
