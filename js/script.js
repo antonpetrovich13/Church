@@ -41,3 +41,32 @@ function ibg() {
 }
 
 ibg();
+
+
+//НАВИГАЦИЯ
+const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
+if (menuLinks.length > 0) {
+	menuLinks.forEach(function (menuLink) {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		let menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			let goToBlock = document.querySelector(menuLink.dataset.goto);
+			let goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+
+			if (burger.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				burger.classList.remove('_active');
+				menu.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: goToBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
