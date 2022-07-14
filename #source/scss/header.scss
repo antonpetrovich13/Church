@@ -10,6 +10,7 @@
 		justify-content: space-between;
 		align-items: center;
 		z-index: 1;
+		transition: all 0.8s ease 0s;
 		&:before {
 			content: "";
 			position: absolute;
@@ -17,15 +18,15 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: #242321;
+			transition: all 0.4s ease 0s;
 		}
 	}
 
-	/*&__wrapper._active {
+	&__wrapper._active {
 		&:before {
-			background-color: #3a3a36;
+			background-color: #242321;
 		}
-	}*/
+	}
 
 	&__logo {
 		position: relative;
@@ -213,6 +214,13 @@
 		}
 		&__link {
 			font-size: 22px;
+				&:after {
+					display: none;
+					opacity: 0;
+				}
+				&:hover:after {
+					display: none;
+				}
 		}
 	}
 	@media (max-width: 500px) {
