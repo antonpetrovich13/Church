@@ -2,6 +2,12 @@
 	position: fixed;
 	z-index: 4;
 	width: 100%;
+	transition: all 2s ease 0s;
+	opacity: 0;
+
+	&._animation {
+		opacity: 1;
+	}
 
 	&__wrapper {
 		padding: 0 50px;
