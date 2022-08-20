@@ -1212,11 +1212,19 @@ body {
       right: 0;
       background-color: #fbf2f2; }
   .footer__number {
+    display: block;
     font-family: "Montserrat Alternates";
     font-weight: bold;
     font-size: 28px;
     letter-spacing: 0.1em;
-    color: #fff7f7; }
+    color: #fff7f7;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    .footer__number:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
   .footer__name {
     margin: 15px 0px 0px 0px;
     font-family: "Montserrat Alternates";
@@ -1329,18 +1337,18 @@ body {
         font-size: 16px; } }
 
 .adults {
-  margin: 180px 0px 0px 0px;
+  margin: 150px 0px 0px 0px;
   text-align: center; }
   .adults__title {
-    font-size: 40px;
+    font-size: 32px;
     letter-spacing: 2px;
     font-weight: 700; }
   .adults__main {
-    margin: 60px 0px 60px 0px; }
+    margin: 50px 0px; }
   .adults__subtitle {
-    font-size: 30px;
-    max-width: 1300px;
-    line-height: 45px;
+    font-size: 24px;
+    max-width: 1000px;
+    line-height: 40px;
     margin: auto; }
     .adults__subtitle > span {
       position: relative; }
@@ -1356,8 +1364,8 @@ body {
         left: 11%;
         background-color: yellow; }
   .adults__schedule {
-    margin: 60px 0px 0px 0px;
-    font-size: 24px;
+    margin: 50px 0px 0px 0px;
+    font-size: 22px;
     letter-spacing: 1px;
     line-height: 30px;
     font-weight: 500; }
@@ -1377,16 +1385,16 @@ body {
     .adults__yel_less:after {
       width: 90%; }
   .adults__materials {
-    margin: 90px 0px 0px 0px;
+    margin: 70px 0px 0px 0px;
     text-align: left; }
   .adults__materials-text {
-    font-size: 24px; }
+    font-size: 20px; }
   .adults__links {
     margin: 15px 0px 0px 0px; }
   .adults__links li {
     margin: 10px 0px 0px 0px; }
   .adults__link {
-    font-size: 18px;
+    font-size: 16px;
     color: #312f2c;
     position: relative; }
     .adults__link:before {
@@ -1404,3 +1412,53 @@ body {
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
       transform: scale(0); }
+  @media (max-width: 900px) {
+    .adults {
+      margin: 130px 0px 0px 0px; }
+      .adults__title {
+        font-size: 28px;
+        letter-spacing: 1px; }
+      .adults__subtitle {
+        font-size: 20px;
+        max-width: 850px;
+        line-height: 30px;
+        margin: auto; }
+      .adults__schedule {
+        margin: 50px auto 0px auto;
+        font-size: 18px;
+        max-width: 600px;
+        line-height: 26px; }
+      .adults__materials {
+        text-align: left; }
+      .adults__materials-text {
+        font-size: 18px; }
+      .adults__link {
+        font-size: 14px; } }
+  @media (max-width: 500px) {
+    .adults {
+      margin: 100px 0px 0px 0px; }
+      .adults__title {
+        font-size: 26px;
+        letter-spacing: 1px;
+        line-height: 30px; }
+      .adults__main {
+        margin: 30px 0px; }
+      .adults__subtitle {
+        font-size: 18px;
+        max-width: 850px;
+        line-height: 30px;
+        margin: auto; }
+      .adults__schedule {
+        margin: 40px auto 0px auto;
+        font-size: 16px;
+        max-width: 600px;
+        line-height: 26px; }
+      .adults__materials {
+        margin: 60px 0px 0px 0px;
+        text-align: left; }
+      .adults__materials-text {
+        font-size: 16px; }
+      .adults__links li {
+        margin: 10px 0px 0px 0px; }
+      .adults__link {
+        font-size: 12px; } }
