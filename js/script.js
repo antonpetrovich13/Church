@@ -50,7 +50,7 @@ function ibg() {
 ibg();
 
 
-//НАВИГАЦИЯ
+// НАВИГАЦИЯ
 const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
 if (menuLinks.length > 0) {
 	menuLinks.forEach(function (menuLink) {
@@ -77,4 +77,6 @@ if (menuLinks.length > 0) {
 		}
 	}
 }
+
+
 

@@ -1,10 +1,13 @@
 // <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ> ============================================================================
 @import "nullstyle.scss";
+
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 14px;
 	color: #000;
 	background-color: #f0ece8;
+	user-select: none;
+
 	&._lock {
 		overflow: hidden;
 	}
@@ -15,6 +18,7 @@ body {
 // <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500;600;700&display=swap");
+
 // <ОБОЛОЧКА, КОНТЕЙНЕР> ====================================================================================
 .wrapper {
 	width: 100%;
@@ -23,14 +27,17 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
 .content {
 	flex: 1 1 auto;
 }
+
 .container {
 	max-width: 1130px;
 	margin: 0px auto;
 	padding: 0px 15px;
 }
+
 .container-2 {
 	max-width: 1300px;
 	margin: 0px auto;
@@ -58,5 +65,6 @@ body {
 @import "header.scss";
 @import "content.scss";
 @import "footer.scss";
+@import "adults.scss";
 
 // <ОСНОВНОЙ БЛОК> ============================================================================================
