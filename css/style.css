@@ -142,6 +142,8 @@ body {
   opacity: 0; }
   .header._animation {
     opacity: 1; }
+  .header_noanimation {
+    opacity: 1; }
   .header__wrapper {
     padding: 0 50px;
     position: relative;
@@ -1457,7 +1459,7 @@ body {
         height: 46%;
         top: 58%;
         left: 11%;
-        background-color: yellow; }
+        background-color: rgba(192, 148, 119, 0.774); }
   .adults__schedule {
     margin: 50px 0px 0px 0px;
     font-size: 22px;
@@ -1476,7 +1478,7 @@ body {
       height: 50%;
       top: 58%;
       left: 7%;
-      background-color: yellow; }
+      background-color: rgba(192, 148, 119, 0.774); }
     .adults__yel_less:after {
       width: 90%; }
   .adults__materials {
