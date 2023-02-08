@@ -39,7 +39,7 @@ document.addEventListener('scroll', function () {
 
 function ibg() {
 
-	let ibg = document.querySelectorAll(".ibg");
+	let ibg = document.querySelectorAll("._ibg");
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img')) {
 			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
@@ -120,9 +120,9 @@ if (animItems.length > 0) {
 //SLIDER BUILDING
 if (document.querySelector('.building__slider')) {
 	new Swiper('.building__slider', {
-		slidesPerView: 3,
-		spaceBetween: 0,
-		speed: 15000,
+		slidesPerView: 4,
+		spaceBetween: 40,
+		speed: 10000,
 		loop: true,
 		simulateTouch: false,
 		inverse: true,
@@ -130,19 +130,7 @@ if (document.querySelector('.building__slider')) {
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: false,
-		},
-		// autoHeight: true,
-		// loopAdditionalSlides: 3,
-		// preloadImages: false,
-		// parallax: true,
-		// pagination: {
-		// 	el: '.controls-slider-main__dotts',
-		// 	clickable: true,
-		// },
-		// navigation: {
-		// 	nextEl: '.slider-main .slider-arrow_next',
-		// 	prevEl: '.slider-main .slider-arrow_prev',
-		// }
+		}
 	});
 }
 

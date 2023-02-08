@@ -526,7 +526,7 @@
 		@include adaptiv-value('height', 700, 400, 1);
 		width: 90vw;
 
-		display: flex;
+		display: grid;
 		align-items: center;
 	}
 
@@ -549,22 +549,50 @@
 
 	&__slider {}
 
+
 	&__wrapper {
+		transition-timing-function: linear;
 		display: flex;
 		align-items: center;
-		transition-timing-function: linear;
+		// justify-content: center;
 	}
+
+	&__slide {
+		// .building__image_big {
+		// 	max-width: 415px;
+		// }
+
+		// .building__image_small {
+		// 	width: 240px;
+		// }
+	}
+
+
 
 
 	&__image {
-		@include adaptiv-value('max-width', 100%, 70%, 1);
+		border-radius: 20px;
 
 		& img {
-			border-radius: 17px;
-			max-width: 100%;
+			border-radius: 20px;
+			// max-width: 100%;
+		}
+
+		&_big {
+			padding: 0px 0px 299px 0px;
+			// width: 415px;
+		}
+
+		&_small {
+			padding: 0px 0px 320px 0px;
+			// width: 240px;
 		}
 	}
+
 }
+
+
+
 
 // <LIFE> ===============================
 .life {
