@@ -117,4 +117,33 @@ if (animItems.length > 0) {
 }
 
 
+//SLIDER BUILDING
+if (document.querySelector('.building__slider')) {
+	new Swiper('.building__slider', {
+		slidesPerView: 3,
+		spaceBetween: 0,
+		speed: 15000,
+		loop: true,
+		simulateTouch: false,
+		inverse: true,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+		// autoHeight: true,
+		// loopAdditionalSlides: 3,
+		// preloadImages: false,
+		// parallax: true,
+		// pagination: {
+		// 	el: '.controls-slider-main__dotts',
+		// 	clickable: true,
+		// },
+		// navigation: {
+		// 	nextEl: '.slider-main .slider-arrow_next',
+		// 	prevEl: '.slider-main .slider-arrow_prev',
+		// }
+	});
+}
+
 
