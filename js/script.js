@@ -120,7 +120,7 @@ if (animItems.length > 0) {
 //SLIDER BUILDING
 if (document.querySelector('.building__slider')) {
 	new Swiper('.building__slider', {
-		slidesPerView: 4,
+		slidesPerView: 1,
 		spaceBetween: 40,
 		speed: 10000,
 		loop: true,
@@ -130,6 +130,17 @@ if (document.querySelector('.building__slider')) {
 		autoplay: {
 			delay: 0,
 			disableOnInteraction: false,
+		},
+		breakpoints: {
+			1024: {
+				slidesPerView: 4,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			540: {
+				slidesPerView: 2,
+			}
 		}
 	});
 }

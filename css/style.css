@@ -864,12 +864,24 @@ body {
     align-items: center; }
   .building__image {
     border-radius: 20px; }
+    @media (max-width: 1160px) {
+      .building__image {
+        border-radius: calc(10px + 10 * ((100vw - 320px) / 840)); } }
     .building__image img {
       border-radius: 20px; }
+      @media (max-width: 1160px) {
+        .building__image img {
+          border-radius: calc(10px + 10 * ((100vw - 320px) / 840)); } }
     .building__image_big {
-      padding: 0px 0px 299px 0px; }
+      padding-bottom: 299px; }
+      @media (max-width: 1160px) {
+        .building__image_big {
+          padding-bottom: calc(200px + 99 * ((100vw - 320px) / 840)); } }
     .building__image_small {
-      padding: 0px 0px 320px 0px; }
+      padding-bottom: 320px; }
+      @media (max-width: 1160px) {
+        .building__image_small {
+          padding-bottom: calc(280px + 40 * ((100vw - 320px) / 840)); } }
 
 .life {
   position: relative;
