@@ -145,4 +145,26 @@ if (document.querySelector('.building__slider')) {
 	});
 }
 
+//SLIDER PROJECTS
+if (document.documentElement.clientWidth <= 1100) {
+	document.querySelector('.projects__wrapper').classList.add('swiper-wrapper');
+	document.querySelectorAll('.projects__column').forEach(((el) => el.classList.add('swiper-slide')));
+
+
+	if (document.querySelector('.projects__body')) {
+		new Swiper('.projects__body', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			speed: 800,
+			loop: true,
+			breakpoints: {
+				650: {
+					slidesPerView: 2,
+				}
+			}
+		});
+	}
+}
+
+
 
