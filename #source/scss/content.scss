@@ -1006,12 +1006,12 @@
 
 // <PROJECTS> ===============================
 .projects {
+	height: fit-content;
 	position: relative;
 	z-index: 2;
 	background-color: #242321;
-	position: relative;
 	@include adaptiv-value('padding-top', 162, 162, 1);
-	@include adaptiv-value('padding-bottom', 134, 134, 1);
+	@include adaptiv-value('padding-bottom', 134, 94, 1);
 	clip-path: polygon(0% 7%, 30% 6%, 66% 5%, 100% 0%, 100% 96%, 55% 100%, 32% 95%, 15% 95%, 0% 96%);
 
 	&__title {
@@ -1025,6 +1025,8 @@
 		text-align: center;
 		color: #fff;
 	}
+
+
 
 	&__wrapper {
 		display: flex;
@@ -1075,7 +1077,7 @@
 
 
 	&__info {
-		@include adaptiv-value('margin-top', 24, 15, 1);
+		@include adaptiv-value('margin-top', 24, 18, 1);
 		background-color: #fff;
 		border-radius: 15px;
 		@include adaptiv-value('padding-top', 45, 35, 1);
@@ -1095,7 +1097,7 @@
 	&__text {
 		color: #000;
 		@include adaptiv-value('font-size', 20, 16, 1);
-		@include adaptiv-value('line-height', 26, 10, 1);
+		@include adaptiv-value('line-height', 26, 20, 1);
 	}
 
 	&__links {
@@ -1118,6 +1120,29 @@
 
 		&:hover {
 			color: rgb(255, 142, 14);
+		}
+	}
+
+	&__dotts {
+		@include adaptiv-value('margin-top', 50, 20, 1);
+		text-align: center;
+
+
+		.swiper-pagination-bullet {
+			@include adaptiv-value('width', 10, 8, 1);
+			@include adaptiv-value('height', 10, 8, 1);
+			transition: all 0.3s linear 0s;
+			background-color: #fff;
+			opacity: 1;
+			margin: 0px 7px !important;
+
+			@media (max-width: 650px) {
+				margin: 0px 4px !important;
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: rgb(197, 124, 41);
 		}
 	}
 
@@ -1169,7 +1194,6 @@
 		}
 	}
 }
-
 
 
 

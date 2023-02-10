@@ -157,6 +157,11 @@ if (document.documentElement.clientWidth <= 1100) {
 			spaceBetween: 0,
 			speed: 800,
 			loop: true,
+			autoHeight: true,
+			pagination: {
+				el: '.projects__dotts',
+				clickable: true,
+			},
 			breakpoints: {
 				650: {
 					slidesPerView: 2,
