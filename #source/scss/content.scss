@@ -621,7 +621,7 @@
 		}
 
 		&__step {
-			@include adaptiv-value('font-size', 26, 14, 1);
+			@include adaptiv-value('font-size', 26, 12, 1);
 			@include adaptiv-value('line-height', 32, 22, 1);
 
 			&:not(:last-child) {

@@ -963,7 +963,7 @@ body {
       line-height: 32px; }
       @media (max-width: 1160px) {
         .building .payments-building__step {
-          font-size: calc(14px + 12 * ((100vw - 320px) / 840)); } }
+          font-size: calc(12px + 14 * ((100vw - 320px) / 840)); } }
       @media (max-width: 1160px) {
         .building .payments-building__step {
           line-height: calc(22px + 10 * ((100vw - 320px) / 840)); } }
