@@ -541,16 +541,11 @@
 		@include adaptiv-value('padding-bottom', 700, 400, 1);
 	}
 
-
-
 	&__main {
 		min-width: 0;
 		padding: 0 0px;
 		border: 10px solid #000;
 	}
-
-	&__slider {}
-
 
 	&__wrapper {
 		transition-timing-function: linear;
@@ -579,6 +574,71 @@
 			@include adaptiv-value('padding-bottom', 320, 280, 1);
 		}
 	}
+
+
+	&__payments {
+		@include adaptiv-value('margin-top', 104, 104, 1);
+	}
+
+	.payments-building {
+		color: #E6E4E4;
+		font-weight: 700;
+
+		&__top {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 -63px;
+		}
+
+		&__image {
+			@include adaptiv-value('margin-right', 63, 30, 1);
+			@include adaptiv-value('width', 250, 250, 1);
+			@include adaptiv-value('padding-bottom', 240, 240, 1);
+		}
+
+		&__title {
+			@include adaptiv-value('margin-left', 63, 30, 1);
+			@include adaptiv-value('width', 904, 2904, 1);
+			font-size: 38px;
+			line-height: 46px;
+			text-align: left;
+		}
+
+		&__body {
+			@include adaptiv-value('margin-top', 89, 89, 1);
+			text-align: left;
+		}
+
+		&__label {
+			@include adaptiv-value('font-size', 24, 24, 1);
+		}
+
+		&__list {
+			@include adaptiv-value('margin-top', 30, 30, 1);
+			@include adaptiv-value('margin-left', 126, 126, 1);
+		}
+
+		&__step {
+			@include adaptiv-value('font-size', 26, 26, 1);
+			@include adaptiv-value('line-height', 32, 32, 1);
+
+			&:not(:last-child) {
+				@include adaptiv-value('margin-bottom', 20, 20, 1);
+			}
+		}
+
+		&__code {
+			cursor: pointer;
+			color: #DEFC87;
+		}
+
+		&__link {
+			display: block;
+			color: #DEFC87;
+		}
+	}
+
 
 	@media (max-width: 480px) {
 		&__title {
@@ -1017,7 +1077,7 @@
 	&__title {
 		position: absolute;
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translate(-50%, 141%);
 		@include adaptiv-value('width', 420, 250, 1);
 		@include adaptiv-value('font-size', 40, 22, 1);
 		@include adaptiv-value('line-height', 45, 27, 1);
@@ -1154,6 +1214,7 @@
 		}
 
 		&__title {
+			transform: translate(-50%, 0%);
 			position: relative;
 			top: 0px;
 		}
@@ -1194,8 +1255,6 @@
 		}
 	}
 }
-
-
 
 // <PLEASURE> ===============================
 .pleasure {

@@ -171,5 +171,22 @@ if (document.documentElement.clientWidth <= 1100) {
 	}
 }
 
+// COPY TEXT WHEN CLICKING ON '.payments-building__code'
+if (document.querySelector('.payments-building__code')) {
+	let text = document.querySelector('.payments-building__code').innerHTML;
+	const copyContent = async () => {
+		try {
+			await navigator.clipboard.writeText(text);
+			console.log('Content copied to clipboard');
+		} catch (err) {
+			console.error('Failed to copy: ', err);
+		}
+	}
+	document.querySelector('.payments-building__code').onclick = function () {
+		copyContent();
+		alert('Код скопирован в буфер обмена!')
+	}
+}
+
 
 
