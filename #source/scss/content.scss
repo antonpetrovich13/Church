@@ -503,13 +503,12 @@
 .building {
 	position: relative;
 	z-index: 3;
-	margin: -35px 0px 0px 0px;
 	@include adaptiv-value('margin-top', -35, -25, 1);
 	background-color: #242321;
-	@include adaptiv-value('padding-top', 150, 90, 1);
-	@include adaptiv-value('padding-bottom', 150, 90, 1);
+	@include adaptiv-value('padding-top', 180, 90, 1);
+	@include adaptiv-value('padding-bottom', 130, 70, 1);
 	text-align: center;
-	clip-path: polygon(0% 8%, 65% 8%, 100% 0%, 100% 0%, 100% 97%, 0% 100%);
+	clip-path: polygon(0% 6%, 65% 4%, 100% 0%, 100% 0%, 100% 97%, 0% 100%);
 
 	&__title {
 		font-weight: 700;
@@ -577,7 +576,7 @@
 
 
 	&__payments {
-		@include adaptiv-value('margin-top', 104, 104, 1);
+		@include adaptiv-value('margin-top', 104, 40, 1);
 	}
 
 	.payments-building {
@@ -588,43 +587,45 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin: 0 -63px;
 		}
 
 		&__image {
-			@include adaptiv-value('margin-right', 63, 30, 1);
-			@include adaptiv-value('width', 250, 250, 1);
-			@include adaptiv-value('padding-bottom', 240, 240, 1);
+			margin: 0 auto;
+			@include adaptiv-value('margin-right', 63, 0, 1);
+			@include adaptiv-value('width', 250, 145, 1);
+			@include adaptiv-value('padding-bottom', 240, 150, 1);
+
 		}
 
 		&__title {
-			@include adaptiv-value('margin-left', 63, 30, 1);
-			@include adaptiv-value('width', 904, 2904, 1);
-			font-size: 38px;
-			line-height: 46px;
+			@include adaptiv-value('margin-left', 63, 0, 1);
+			@include adaptiv-value('width', 904, 0, 1);
+			@include adaptiv-value('font-size', 38, 24, 1);
+			@include adaptiv-value('line-height', 46, 30, 1);
 			text-align: left;
 		}
 
 		&__body {
-			@include adaptiv-value('margin-top', 89, 89, 1);
+			@include adaptiv-value('margin-top', 89, 30, 1);
 			text-align: left;
 		}
 
 		&__label {
-			@include adaptiv-value('font-size', 24, 24, 1);
+
+			@include adaptiv-value('font-size', 24, 18, 1);
 		}
 
 		&__list {
-			@include adaptiv-value('margin-top', 30, 30, 1);
-			@include adaptiv-value('margin-left', 126, 126, 1);
+			@include adaptiv-value('margin-top', 30, 10, 1);
+			@include adaptiv-value('margin-left', 126, 15, 1);
 		}
 
 		&__step {
-			@include adaptiv-value('font-size', 26, 26, 1);
-			@include adaptiv-value('line-height', 32, 32, 1);
+			@include adaptiv-value('font-size', 26, 14, 1);
+			@include adaptiv-value('line-height', 32, 22, 1);
 
 			&:not(:last-child) {
-				@include adaptiv-value('margin-bottom', 20, 20, 1);
+				@include adaptiv-value('margin-bottom', 20, 7, 1);
 			}
 		}
 
@@ -634,11 +635,85 @@
 		}
 
 		&__link {
-			display: block;
 			color: #DEFC87;
 		}
 	}
 
+	@media (max-width:1350px) {
+		.payments-building {
+
+			&__image {
+				@include adaptiv-value('margin-right', 30, 0, 1);
+				@include adaptiv-value('width', 220, 145, 1);
+				@include adaptiv-value('padding-bottom', 220, 150, 1);
+			}
+
+
+			&__title {
+				@include adaptiv-value('margin-left', 30, 0, 1);
+				@include adaptiv-value('width', 750, 0, 1);
+			}
+		}
+	}
+
+	@media (max-width:1100px) {
+		.payments-building {
+			&__image {
+				margin: 0;
+			}
+		}
+
+	}
+
+	@media (max-width: 1000px) {
+		.payments-building {
+
+			&__image {
+				@include adaptiv-value('margin-right', 30, 0, 1);
+				@include adaptiv-value('width', 220, 145, 1);
+				@include adaptiv-value('padding-bottom', 220, 150, 1);
+			}
+
+
+			&__title {
+				@include adaptiv-value('margin-left', 30, 0, 1);
+				@include adaptiv-value('width', 800, 100, 1);
+				@include adaptiv-value('font-size', 30, 20, 1);
+				@include adaptiv-value('line-height', 40, 28, 1);
+			}
+		}
+	}
+
+
+	@media (max-width: 900px) {
+		clip-path: polygon(0% 4%, 65% 4%, 100% 0%, 100% 0%, 100% 97%, 0% 100%);
+
+		&__payments {
+			@include adaptiv-value('margin-top', 50, 40, 1);
+		}
+
+		.payments-building {
+			&__top {
+				flex-direction: column;
+			}
+
+			&__image {
+				@include adaptiv-value('margin-top', 50, 30, 1);
+				order: 2;
+			}
+
+			&__title {
+				flex: 1 01 100%;
+				min-width: 300px;
+				text-align: center;
+				order: 1;
+			}
+
+			&__list {
+				@include adaptiv-value('margin-left', 25, 25, 1);
+			}
+		}
+	}
 
 	@media (max-width: 480px) {
 		&__title {
