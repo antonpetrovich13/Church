@@ -2,9 +2,15 @@
 	position: relative;
 	z-index: 3;
 	margin: -30px 0px 0px 0px;
-	padding: 155px 15px 105px 15px;
+	// padding: 155px 15px 105px 15px;
 	background-color: #242321;
 	clip-path: polygon(0% 5%, 50% 5%, 80% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+
+	@include adaptiv-value('padding-top', 155, 25, 1);
+	@include adaptiv-value('padding-bottom', 105, 20, 1);
+	@include adaptiv-value('padding-left', 15, 10, 1);
+	@include adaptiv-value('padding-right', 15, 10, 1);
 
 	&_add {
 		margin: 0px 0px 0px 0px;
@@ -17,36 +23,82 @@
 	}
 
 	&__info {
-		max-width: 400px;
+		@include adaptiv-value('max-width', 500, 500, 1);
 	}
 
 	&__text {
-		margin: 0px 0px 30px 0px;
+		position: relative;
+		max-width: 400px;
 		font-family: "Montserrat Alternates";
 		font-weight: 600;
-		font-size: 19px;
-		line-height: 28px;
 		letter-spacing: 0.06em;
 		color: #ebe5e5;
+
+		@include adaptiv-value('font-size', 19, 17, 1);
+		@include adaptiv-value('line-height', 28, 24, 1);
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 80%;
+			height: 1px;
+			bottom: -27px;
+			left: 0;
+			background-color: #FAFAFA;
+		}
 	}
 
 	&__adress {
+		@include adaptiv-value('margin-top', 62, 50, 1);
+		@include adaptiv-value('font-size', 22, 20, 1);
+		@include adaptiv-value('line-height', 28, 26, 1);
 		font-family: "Montserrat Alternates";
 		font-weight: bold;
-		font-size: 22px;
 		letter-spacing: 0.03em;
 		color: #eeeeee;
 	}
 
+	&__certificate {
+
+		@include adaptiv-value('margin-bottom', 10, 5, 1);
+		font-family: "Montserrat Alternates";
+		font-weight: bold;
+		letter-spacing: 0.03em;
+		color: #eeeeee;
+
+		& p {
+			@include adaptiv-value('font-size', 22, 10, 1);
+			@include adaptiv-value('line-height', 28, 16, 1);
+		}
+
+	}
+
+	&__bank {
+		font-family: "Montserrat Alternates";
+		font-weight: 700;
+		letter-spacing: 0.03em;
+		color: #eeeeee;
+
+		& p {
+			@include adaptiv-value('font-size', 22, 10, 1);
+			@include adaptiv-value('line-height', 28, 16, 1);
+		}
+	}
+
+	&__contacts {
+		@include adaptiv-value('margin-top', 50, 50, 1);
+		text-align: right;
+	}
+
 	&__title {
-		margin: 0px 0px 70px 0px;
 		font-family: "Montserrat Alternates";
 		font-weight: 500;
-		font-size: 28px;
-		text-align: right;
 		letter-spacing: 0.1em;
 		color: #fbf2f2;
 		position: relative;
+
+		@include adaptiv-value('margin-bottom', 70, 50, 1);
+		@include adaptiv-value('font-size', 28, 24, 1);
 
 		&:before {
 			content: "";
@@ -63,24 +115,61 @@
 		display: block;
 		font-family: "Montserrat Alternates";
 		font-weight: bold;
-		font-size: 28px;
 		letter-spacing: 0.1em;
-		color: #fff7f7;
-		transition: all 0.3s ease 0s;
 
-		&:hover {
-			transform: scale(1.05);
+
+		@include adaptiv-value('font-size', 28, 20, 1);
+
+		& a {
+			color: #fff7f7;
+			transition: all 0.3s ease 0s;
+
+			@media(any-hover:hover) {
+				&:hover {
+					color: rgba(253, 176, 87, 0.952);
+				}
+			}
 		}
+
+
+	}
+
+	&__mail {
+		display: inline-block;
+		margin-top: 7px;
+
+		font-family: 'Montserrat Alternates';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		letter-spacing: 0.1em;
+
+		@include adaptiv-value('margin-top', 9, 15, 1);
+		@include adaptiv-value('margin-bottom', 15, 15, 1);
+		@include adaptiv-value('font-size', 20, 18, 1);
+
+		& a {
+			transition: all 0.3s ease 0s;
+			color: #FFF7F7;
+
+			@media(any-hover:hover) {
+				&:hover {
+					color: rgba(253, 176, 87, 0.952);
+				}
+			}
+		}
+
 	}
 
 	&__name {
-		margin: 15px 0px 0px 0px;
 		font-family: "Montserrat Alternates";
 		font-weight: 500;
 		font-size: 23px;
 		text-align: right;
 		letter-spacing: 0.1em;
 		color: #fbf9f9;
+
+		@include adaptiv-value('font-size', 23, 17, 1);
 
 		& span {
 			margin: 3px 0px 0px 0px;
@@ -91,35 +180,16 @@
 	}
 
 	@media (max-width: 1050px) {
-		padding: 135px 15px 85px 15px;
-
-		&__text {
-			margin: 0px 0px 28px 0px;
-			font-size: 17px;
-			line-height: 28px;
-		}
-
-		&__adress {
-			font-size: 20px;
-		}
+		// padding: 135px 15px 85px 15px;
 
 		&__title {
-			margin: 0px 0px 60px 0px;
-			font-size: 26px;
-
 			&:before {
 				width: 55%;
 				bottom: -19px;
 			}
 		}
 
-		&__number {
-			font-size: 24px;
-		}
-
 		&__name {
-			margin: 15px 0px 0px 0px;
-			font-size: 21px;
 
 			& span {
 				margin: 5px 0px 0px 0px;
@@ -128,20 +198,15 @@
 		}
 	}
 
-	@media (max-width: 720px) {
-		padding: 80px 15px 75px 15px;
+	@media (max-width: 900px) {
+		// padding: 80px 15px 75px 15px;
 
 		&__wrapper {
-			flex-wrap: wrap;
-			justify-content: center;
+			flex-direction: column;
 		}
 
 		&__column {
-			flex: 0 1 100%;
-			text-align: center;
-
 			&_1 {
-				margin: 50px 0px 0px 0px;
 				order: 2;
 			}
 
@@ -150,11 +215,18 @@
 			}
 		}
 
-		&__title {
+		&__info {
+			margin: 0 auto;
 			text-align: center;
+		}
+
+		&__contacts {
+			text-align: center;
+		}
+
+
+		&__title {
 			display: inline-block;
-			margin: 0px 0px 70px 0px;
-			font-size: 24px;
 
 			&:before {
 				content: "";
@@ -164,13 +236,12 @@
 		}
 
 		&__number {
-			display: block;
-			font-size: 22px;
+			& a {
+				display: inline-block;
+			}
 		}
 
 		&__name {
-			margin: 15px 0px 0px 0px;
-			font-size: 19px;
 			text-align: center;
 
 			& span {
@@ -183,22 +254,16 @@
 			display: none;
 		}
 
-		&__info {
-			max-width: 100%;
-		}
-
 		&__adress {
-			font-size: 18px;
+			@include adaptiv-value('margin-top', 40, 40, 1);
+			@include adaptiv-value('margin-bottom', 40, 40, 1);
 		}
 	}
 
 	@media (max-width: 500px) {
-		padding: 70px 10px 60px 10px;
+		// padding: 70px 10px 60px 10px;
 
 		&__title {
-			margin: 0px 0px 55px 0px;
-			font-size: 24px;
-
 			&:before {
 				content: "";
 				width: 85%;
@@ -208,28 +273,13 @@
 			}
 		}
 
-		&__column {
-			&_1 {
-				margin: 35px 0px 0px 0px;
-			}
-		}
-
-		&__number {
-			font-size: 20px;
-		}
 
 		&__name {
-			margin: 11px 0px 0px 0px;
-			font-size: 17px;
 
 			& span {
 				margin: 4px 0px 0px 0px;
 				font-size: 13px;
 			}
-		}
-
-		&__adress {
-			font-size: 16px;
 		}
 	}
 }
