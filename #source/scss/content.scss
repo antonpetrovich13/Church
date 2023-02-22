@@ -1,3 +1,19 @@
+@keyframes buttonsScaleOnTouchScreens {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
 // <MAIN> ===============================
 .main {
 	position: relative;
@@ -457,6 +473,11 @@
 			}
 		}
 
+		@media(any-hover:none) {
+			transition: all 2s linear 0s;
+			animation: buttonsScaleOnTouchScreens 2s linear infinite;
+		}
+
 	}
 
 
@@ -676,10 +697,24 @@
 		&__code {
 			cursor: pointer;
 			color: #DEFC87;
+			transition: all 0.3s ease 0s;
+
+			@media(any-hover:hover) {
+				&:hover {
+					color: #eccc12;
+				}
+			}
 		}
 
 		&__link {
 			color: #DEFC87;
+			transition: all 0.3s ease 0s;
+
+			@media(any-hover:hover) {
+				&:hover {
+					color: #eccc12;
+				}
+			}
 		}
 	}
 
@@ -988,6 +1023,11 @@
 				background-color: rgb(209, 138, 81);
 
 			}
+		}
+
+		@media(any-hover:none) {
+			transition: all 2s linear 0s;
+			animation: buttonsScaleOnTouchScreens 2s linear infinite;
 		}
 
 	}

@@ -344,6 +344,28 @@ body {
       max-width: 250px;
       line-height: 19px; } }
 
+@-webkit-keyframes buttonsScaleOnTouchScreens {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes buttonsScaleOnTouchScreens {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
 .main {
   position: relative;
   z-index: 1;
@@ -786,6 +808,13 @@ body {
         background-color: rgba(146, 94, 59, 0.678); }
         .schedule__button:hover p {
           color: #fffefef6; } }
+    @media (any-hover: none) {
+      .schedule__button {
+        -webkit-transition: all 2s linear 0s;
+        -o-transition: all 2s linear 0s;
+        transition: all 2s linear 0s;
+        -webkit-animation: buttonsScaleOnTouchScreens 2s linear infinite;
+        animation: buttonsScaleOnTouchScreens 2s linear infinite; } }
   @media (max-width: 1440px) {
     .schedule__photo {
       position: absolute;
@@ -1021,9 +1050,21 @@ body {
             margin-bottom: calc(7px + 13 * ((100vw - 320px) / 840)); } }
     .building .payments-building__code {
       cursor: pointer;
-      color: #DEFC87; }
+      color: #DEFC87;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      @media (any-hover: hover) {
+        .building .payments-building__code:hover {
+          color: #eccc12; } }
     .building .payments-building__link {
-      color: #DEFC87; }
+      color: #DEFC87;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      @media (any-hover: hover) {
+        .building .payments-building__link:hover {
+          color: #eccc12; } }
   @media (max-width: 1350px) {
     .building .payments-building__image {
       margin-right: 30px;
@@ -1338,6 +1379,13 @@ body {
     @media (any-hover: hover) {
       .life__button:hover {
         background-color: #d18a51; } }
+    @media (any-hover: none) {
+      .life__button {
+        -webkit-transition: all 2s linear 0s;
+        -o-transition: all 2s linear 0s;
+        transition: all 2s linear 0s;
+        -webkit-animation: buttonsScaleOnTouchScreens 2s linear infinite;
+        animation: buttonsScaleOnTouchScreens 2s linear infinite; } }
   @media (max-width: 1440px) {
     .life .container-2 {
       max-width: 1000px; }
