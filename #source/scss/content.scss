@@ -12,8 +12,6 @@
 	}
 }
 
-
-
 // <MAIN> ===============================
 .main {
 	position: relative;
@@ -717,6 +715,8 @@
 			}
 		}
 	}
+
+
 
 	@media (max-width:1350px) {
 		.payments-building {
@@ -1576,6 +1576,83 @@
 		&__title,
 		&__subtitle {
 			text-align: center;
+		}
+	}
+}
+
+.popup-building {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	transform: scale(0);
+	transition: all 0.3s ease 0s;
+	background-color: #000000a1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&._active {
+		transform: scale(1);
+	}
+
+	&__body {
+		font-family: 'Montserrat Alternates';
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 15px;
+		background-color: #f3f2f2;
+		@include adaptiv-value('width', 500, 270, 1);
+		@include adaptiv-value('height', 200, 220, 1);
+		@include adaptiv-value('padding-right', 15, 10, 1);
+		@include adaptiv-value('padding-left', 15, 10, 1);
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		@include adaptiv-value('font-size', 26, 22, 1);
+	}
+
+	&__text {
+		text-align: center;
+		@include adaptiv-value('font-size', 20, 16, 1);
+		@include adaptiv-value('padding-top', 12, 20, 1);
+		@include adaptiv-value('padding-bottom', 20, 20, 1);
+	}
+
+	&__button {
+		position: relative;
+		font-weight: 600;
+		cursor: pointer;
+		@include adaptiv-value('font-size', 18, 18, 1);
+		color: rgb(209, 138, 81);
+		transition: all 0.3s ease 0s;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 80%;
+			height: 1px;
+			bottom: -4px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			background-color: rgb(209, 138, 81);
+			opacity: 1;
+			transition: all 0.3s ease 0s;
+		}
+
+		@media(any-hover:hover) {
+			&:hover {
+				&:after {
+					content: '';
+					opacity: 0;
+				}
+			}
 		}
 	}
 }

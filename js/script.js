@@ -174,17 +174,52 @@ if (document.documentElement.clientWidth <= 1100) {
 // COPY TEXT WHEN CLICKING ON '.payments-building__code'
 if (document.querySelector('.payments-building__code')) {
 	let text = document.querySelector('.payments-building__code').innerHTML;
+	let closeButton = document.querySelector('.popup-building__button');
+
+
 	const copyContent = async () => {
 		try {
 			await navigator.clipboard.writeText(text);
-			console.log('Content copied to clipboard');
 		} catch (err) {
-			console.error('Failed to copy: ', err);
 		}
 	}
 	document.querySelector('.payments-building__code').onclick = function () {
 		copyContent();
-		alert('Код скопирован в буфер обмена!')
+		openPopUp();
+	}
+
+	function widthOfScrollLine() {
+
+		let widthOfScroll = document.createElement('div');
+
+		widthOfScroll.style.overflowY = 'scroll';
+		widthOfScroll.style.width = '50px';
+		widthOfScroll.style.height = '50px';
+
+		document.body.append(widthOfScroll);
+		let scrollWidth = widthOfScroll.offsetWidth - widthOfScroll.clientWidth;
+
+		widthOfScroll.remove();
+
+		return scrollWidth;
+	}
+
+	function openPopUp() {
+		let popUp = document.querySelector('.popup-building');
+		popUp.classList.add('_active');
+		document.body.classList.add('_lock');
+
+		let scrollWidth = widthOfScrollLine();
+		document.body.style.paddingRight = scrollWidth + 'px';
+
+
+		if (closeButton) {
+			closeButton.onclick = function () {
+				document.body.classList.remove('_lock');
+				popUp.classList.remove('_active');
+				document.body.style.paddingRight = 0 + 'px';
+			}
+		}
 	}
 }
 
