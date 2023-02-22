@@ -2,7 +2,6 @@
 	position: relative;
 	z-index: 3;
 	margin: -30px 0px 0px 0px;
-	// padding: 155px 15px 105px 15px;
 	background-color: #242321;
 	clip-path: polygon(0% 5%, 50% 5%, 80% 0%, 100% 0%, 100% 100%, 0% 100%);
 
@@ -14,7 +13,9 @@
 
 	&_add {
 		margin: 0px 0px 0px 0px;
-		padding: 95px 15px 45px 15px;
+		@include adaptiv-value('padding-top', 95, 25, 1);
+		@include adaptiv-value('padding-bottom', 95, 20, 1);
+		// padding: 95px 15px 45px 15px;
 	}
 
 	&__wrapper {
@@ -180,7 +181,6 @@
 	}
 
 	@media (max-width: 1050px) {
-		// padding: 135px 15px 85px 15px;
 
 		&__title {
 			&:before {
@@ -199,7 +199,6 @@
 	}
 
 	@media (max-width: 900px) {
-		// padding: 80px 15px 75px 15px;
 
 		&__wrapper {
 			flex-direction: column;
@@ -261,7 +260,6 @@
 	}
 
 	@media (max-width: 500px) {
-		// padding: 70px 10px 60px 10px;
 
 		&__title {
 			&:before {
