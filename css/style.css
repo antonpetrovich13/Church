@@ -349,8 +349,8 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1); }
   50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05); }
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
@@ -360,8 +360,8 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1); }
   50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05); }
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
@@ -1975,6 +1975,152 @@ body {
       transition: all 0.3s ease 0s; }
     @media (any-hover: hover) {
       .popup-building__button:hover:after {
+        content: '';
+        opacity: 0; } }
+
+.popup-life {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background-color: #000000a1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .popup-life._active {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .popup-life__body {
+    position: relative;
+    font-family: 'Montserrat Alternates';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #f3f2f2;
+    width: 500px;
+    height: 280px;
+    padding-right: 15px;
+    padding-left: 15px; }
+    @media (max-width: 1160px) {
+      .popup-life__body {
+        width: calc(270px + 230 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .popup-life__body {
+        height: calc(280px + 0 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .popup-life__body {
+        padding-right: calc(10px + 5 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .popup-life__body {
+        padding-left: calc(10px + 5 * ((100vw - 320px) / 840)); } }
+  .popup-life__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px; }
+    @media (max-width: 1160px) {
+      .popup-life__title {
+        font-size: calc(22px + 4 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .popup-life__title {
+        line-height: calc(26px + 4 * ((100vw - 320px) / 840)); } }
+  .popup-life__main {
+    margin-top: 25px;
+    margin-bottom: 25px; }
+    @media (max-width: 1160px) {
+      .popup-life__main {
+        margin-top: calc(25px + 0 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .popup-life__main {
+        margin-bottom: calc(25px + 0 * ((100vw - 320px) / 840)); } }
+  .popup-life__point:not(:last-child) {
+    margin-bottom: 15px; }
+    @media (max-width: 1160px) {
+      .popup-life__point:not(:last-child) {
+        margin-bottom: calc(13px + 2 * ((100vw - 320px) / 840)); } }
+  .popup-life__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #242321;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    @media (max-width: 1160px) {
+      .popup-life__link {
+        font-size: calc(14px + 4 * ((100vw - 320px) / 840)); } }
+    .popup-life__link:before {
+      margin-right: 10px; }
+      @media (max-width: 1160px) {
+        .popup-life__link:before {
+          margin-right: calc(14px + -4 * ((100vw - 320px) / 840)); } }
+    @media (any-hover: hover) {
+      .popup-life__link:hover {
+        color: #b1945b; } }
+  .popup-life__button {
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    color: #d18a51;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    @media (max-width: 1160px) {
+      .popup-life__button {
+        font-size: calc(18px + 0 * ((100vw - 320px) / 840)); } }
+    .popup-life__button:after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      bottom: -4px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      background-color: #d18a51;
+      opacity: 1;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    @media (any-hover: hover) {
+      .popup-life__button:hover:after {
         content: '';
         opacity: 0; } }
 

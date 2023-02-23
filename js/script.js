@@ -223,5 +223,42 @@ if (document.querySelector('.payments-building__code')) {
 	}
 }
 
+//OPEN OPUP-LIFE
+if (document.querySelector('.life__button')) {
+
+	function widthOfScrollLine() {
+
+		let widthOfScroll = document.createElement('div');
+
+		widthOfScroll.style.overflowY = 'scroll';
+		widthOfScroll.style.width = '50px';
+		widthOfScroll.style.height = '50px';
+
+		document.body.append(widthOfScroll);
+		let scrollWidth = widthOfScroll.offsetWidth - widthOfScroll.clientWidth;
+
+		widthOfScroll.remove();
+
+		return scrollWidth;
+	}
+
+
+	document.querySelector('.life__button').onclick = function (e) {
+		e.preventDefault();
+		let scrollWidth = widthOfScrollLine();
+
+		document.querySelector('.popup-life').classList.add('_active');
+		document.body.classList.add('_lock');
+		document.body.style.paddingRight = scrollWidth + 'px';
+
+
+		document.querySelector('.popup-life__button').onclick = function () {
+			document.querySelector('.popup-life').classList.remove('_active');
+			document.body.classList.remove('_lock');
+			document.body.style.paddingRight = 0 + 'px';
+		}
+	}
+}
+
 
 

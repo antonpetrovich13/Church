@@ -4,7 +4,7 @@
 	}
 
 	50% {
-		transform: scale(1.05);
+		transform: scale(1.1);
 	}
 
 	100% {
@@ -1625,6 +1625,131 @@
 		@include adaptiv-value('padding-bottom', 20, 20, 1);
 	}
 
+	&__button {
+		position: relative;
+		font-weight: 600;
+		cursor: pointer;
+		@include adaptiv-value('font-size', 18, 18, 1);
+		color: rgb(209, 138, 81);
+		transition: all 0.3s ease 0s;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 80%;
+			height: 1px;
+			bottom: -4px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			background-color: rgb(209, 138, 81);
+			opacity: 1;
+			transition: all 0.3s ease 0s;
+		}
+
+		@media(any-hover:hover) {
+			&:hover {
+				&:after {
+					content: '';
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+.popup-life {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	transform: scale(0);
+	transition: all 0.3s ease 0s;
+	background-color: #000000a1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&._active {
+		transform: scale(1);
+	}
+
+	&__body {
+		position: relative;
+		font-family: 'Montserrat Alternates';
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 15px;
+		background-color: #f3f2f2;
+		@include adaptiv-value('width', 500, 270, 1);
+		@include adaptiv-value('height', 280, 280, 1);
+		@include adaptiv-value('padding-right', 15, 10, 1);
+		@include adaptiv-value('padding-left', 15, 10, 1);
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		@include adaptiv-value('font-size', 26, 22, 1);
+		@include adaptiv-value('line-height', 30, 26, 1);
+	}
+
+	&__main {
+		@include adaptiv-value('margin-top', 25, 25, 1);
+		@include adaptiv-value('margin-bottom', 25, 25, 1);
+	}
+
+	&__point {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 15, 13, 1);
+		}
+
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #242321;
+		@include adaptiv-value('font-size', 18, 14, 1);
+		transition: all 0.3s ease 0s;
+
+		&:before {
+			@include adaptiv-value('margin-right', 10, 14, 1);
+		}
+
+		@media(any-hover:hover) {
+			&:hover {
+				color: #b1945b;
+			}
+		}
+	}
+
+	// &__button {
+	// 	cursor: pointer;
+	// 	position: absolute;
+	// 	width: 20px;
+	// 	height: 20px;
+	// 	right: 10px;
+	// 	transition: all 0.3s ease 0s;
+	// 	@include adaptiv-value('width', 20, 18, 1);
+	// 	@include adaptiv-value('height', 20, 18, 1);
+	// 	@include adaptiv-value('top', 10, 10, 1);
+	// 	@include adaptiv-value('right', 10, 5, 1);
+
+	// 	&:before {
+	// 		@include adaptiv-value('font-size', 20, 18, 1);
+	// 	}
+
+	// 	@media(any-hover:hover) {
+	// 		&:hover {
+	// 			color: #b1945b;
+	// 		}
+	// 	}
+	// }
 	&__button {
 		position: relative;
 		font-weight: 600;
