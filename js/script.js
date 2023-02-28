@@ -261,17 +261,5 @@ if (document.querySelector('.life__button')) {
 }
 
 
-// Прячем объявление в бургер при ширине <=1100
-if (document.querySelector('.header__button')) {
-	if (document.documentElement.clientWidth <= 1100) {
-		let buttonElement = document.querySelector('.header__button');
-		let listElement = document.querySelector('.header__menu');
-
-		let buttonElementClone = buttonElement.cloneNode(true);
-		listElement.append(buttonElementClone);
-		buttonElement.remove();
-	}
-}
-
 
 
