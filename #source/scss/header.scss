@@ -73,7 +73,7 @@
 			white-space: nowrap;
 
 			&:not(:last-child) {
-				@include adaptiv-value('margin-right', 16, 0, 1);
+				@include adaptiv-value('margin-right', 20, 0, 1);
 			}
 
 		}
@@ -250,7 +250,7 @@
 
 			& li {
 				&:not(:last-child) {
-					@include adaptiv-value('margin-bottom', 15, 15, 1);
+					@include adaptiv-value('margin-bottom', 20, 18, 1);
 					@include adaptiv-value('margin-right', 0, 0, 1);
 				}
 			}
