@@ -5,7 +5,7 @@
 // МЕНЮ-БУРГЕР
 
 const burger = document.querySelector('.header__burger');
-const menu = document.querySelector('.header__menu');
+const menu = document.querySelector('.header__main');
 
 
 function burgerRun() {
@@ -257,6 +257,19 @@ if (document.querySelector('.life__button')) {
 			document.body.classList.remove('_lock');
 			document.body.style.paddingRight = 0 + 'px';
 		}
+	}
+}
+
+
+// Прячем объявление в бургер при ширине <=1100
+if (document.querySelector('.header__button')) {
+	if (document.documentElement.clientWidth <= 1100) {
+		let buttonElement = document.querySelector('.header__button');
+		let listElement = document.querySelector('.header__menu');
+
+		let buttonElementClone = buttonElement.cloneNode(true);
+		listElement.append(buttonElementClone);
+		buttonElement.remove();
 	}
 }
 

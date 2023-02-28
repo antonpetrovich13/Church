@@ -57,28 +57,33 @@
 		visibility: hidden;
 	}
 
+	&__main {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&__menu {
 		display: flex;
 		align-items: center;
 
 		& li {
 			white-space: nowrap;
-			margin: 0px 16px;
 
-			&:first-child {
-				margin: 0px 16px 0px 0px;
+			&:not(:last-child) {
+				@include adaptiv-value('margin-right', 16, 0, 1);
 			}
 
-			&:last-child {
-				margin: 0px 0px 0px 16px;
-			}
 		}
 	}
 
 	&__link {
 		color: #fffefe;
 		position: relative;
-		font-size: 19px;
+
+		@include adaptiv-value('font-size', 19, 10, 1);
 
 		&:after {
 			content: "";
@@ -96,26 +101,51 @@
 		}
 	}
 
-	@media (max-width: 1440px) {
-		&__logo {
-			font-size: 17px;
+	&__button {
+		position: relative;
+		display: block;
+		background-color: #fffefef6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		overflow: hidden;
+		transition: all 0.3s ease 0s;
+
+		@include adaptiv-value('margin-left', 40, 0, 1);
+		@include adaptiv-value('width', 140, 140, 1);
+		@include adaptiv-value('height', 45, 45, 1);
+
+		& p {
+			font-family: "Montserrat Alternates";
+			font-weight: 500;
+			color: #000;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease 0s;
+
+			@include adaptiv-value('font-size', 19, 14, 1);
 		}
 
-		&__menu {
-			& li {
-				margin: 0px 16px;
+		@media(any-hover:hover) {
+			&:hover {
+				background-color: rgba(192, 148, 119, 0.651);
 
-				&:first-child {
-					margin: 0px 16px 0px 0px;
-				}
-
-				&:last-child {
-					margin: 0px 0px 0px 16px;
+				& p {
+					color: #fffefef6;
 				}
 			}
 		}
 
-		&__link {
+		@media(any-hover:none) {
+			transition: all 2s linear 0s;
+			animation: buttonsScaleOnTouchScreens 2s linear infinite;
+		}
+
+	}
+
+	@media (max-width: 1440px) {
+		&__logo {
 			font-size: 17px;
 		}
 	}
@@ -130,35 +160,9 @@
 			line-height: 20px;
 			max-width: 300px;
 		}
-
-		&__menu {
-			& li {
-				margin: 0px 16px;
-			}
-		}
-
-		&__link {
-			font-size: 15px;
-		}
 	}
 
-	@media (max-width: 970px) {
-		&__menu {
-			& li {
-				margin: 0px 8px;
-
-				&:first-child {
-					margin: 0px 8px 0px 0px;
-				}
-
-				&:last-child {
-					margin: 0px 0px 0px 8px;
-				}
-			}
-		}
-	}
-
-	@media (max-width: 900px) {
+	@media (max-width: 1100px) {
 		&__wrapper {
 			padding: 0px 30px;
 
@@ -227,7 +231,7 @@
 			top: 16px;
 		}
 
-		&__menu {
+		&__main {
 			overflow: auto;
 			position: fixed;
 			z-index: 2;
@@ -236,24 +240,23 @@
 			width: 100%;
 			height: 100%;
 			background-color: rgb(27, 25, 25);
-			flex-direction: column;
-			justify-content: center;
 			transition: all 0.4s ease 0s;
 
+		}
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+
 			& li {
-				margin: 30px 0px 0px 0px;
-
-				&:first-child {
-					margin: 0px 0px 0px 0px;
-				}
-
-				&:last-child {
-					margin: 30px 0px 0px 0px;
+				&:not(:last-child) {
+					@include adaptiv-value('margin-bottom', 15, 15, 1);
+					@include adaptiv-value('margin-right', 0, 0, 1);
 				}
 			}
 		}
 
-		&__menu._active {
+		&__main._active {
 			top: 0;
 		}
 
@@ -268,6 +271,13 @@
 			&:hover:after {
 				display: none;
 			}
+
+		}
+
+		&__button {
+			@include adaptiv-value('margin-left', 0, 0, 1);
+			@include adaptiv-value('margin-left', 0, 0, 1);
+			@include adaptiv-value('margin-top', 40, 30, 1);
 		}
 	}
 

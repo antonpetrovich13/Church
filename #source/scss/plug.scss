@@ -1,6 +1,6 @@
 .plug {
 	@include adaptiv-value('margin-top', 150, 100, 1);
-	@include adaptiv-value('margin-bottom', 70, 50, 1);
+	@include adaptiv-value('margin-bottom', 5, 20, 1);
 
 	&__wrapper {
 		text-align: center;
@@ -31,7 +31,7 @@
 	}
 
 	&__image {
-		@include adaptiv-value('padding-bottom', 300, 150, 1);
+		@include adaptiv-value('padding-bottom', 400, 200, 1);
 		@include adaptiv-value('max-width', 300, 150, 1);
 		margin: 0 auto;
 	}
