@@ -407,7 +407,7 @@ body {
       margin-left: calc(0px + 0 * ((100vw - 320px) / 840)); } }
   @media (max-width: 1100px) and (max-width: 1160px) {
     .header__button {
-      margin-top: calc(30px + 10 * ((100vw - 320px) / 840)); } }
+      margin-top: calc(50px + -10 * ((100vw - 320px) / 840)); } }
   @media (max-width: 500px) {
     .header__wrapper {
       height: 60px;
@@ -529,6 +529,7 @@ body {
     .about__title span {
       font-size: 23px; }
   .about__subtitle {
+    display: block;
     margin: 41px 0px 0px 0px;
     font-size: 23px;
     line-height: 30px; }
@@ -1110,6 +1111,7 @@ body {
           .building .payments-building__step:not(:last-child) {
             margin-bottom: calc(7px + 13 * ((100vw - 320px) / 840)); } }
     .building .payments-building__code {
+      white-space: nowrap;
       cursor: pointer;
       color: #DEFC87;
       -webkit-transition: all 0.3s ease 0s;

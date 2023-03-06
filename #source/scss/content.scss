@@ -96,6 +96,7 @@
 	}
 
 	&__subtitle {
+		display: block;
 		margin: 41px 0px 0px 0px;
 		font-size: 23px;
 		line-height: 30px;
@@ -668,6 +669,7 @@
 		}
 
 		&__step {
+
 			@include adaptiv-value('font-size', 26, 12, 1);
 			@include adaptiv-value('line-height', 32, 22, 1);
 
@@ -677,6 +679,7 @@
 		}
 
 		&__code {
+			white-space: nowrap;
 			cursor: pointer;
 			color: #DEFC87;
 			transition: all 0.3s ease 0s;
