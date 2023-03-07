@@ -277,16 +277,40 @@ document.addEventListener('click', function (event) {
 
 })
 
+// ОПРЕДЕЛЕНИЕ АТКУАЛЬНОЙ СТРАНИЦЫ САЙТА, ИЗМЕНЕНИЕ ЯЗЫКА ДОКУМЕНТА НА СООТВЕТСВУЮЩЕЙ СТРАНИЦЕ
+if (window.location.pathname == '/advertisements.html') {
+	document.addEventListener('click', function (event) {
 
-// if (document.querySelector('.select__option')) {
-// 	let elem = document.querySelector('.select__option');
-// 	let selectValue = document.querySelector('.select__value');
-// 	let selectValueStyles = window.getComputedStyle(selectValue, ':before');
-// 	let arrow = selectValueStyles['content'];
-// 	if (elem.getAttribute('data-value') == 'ru') {
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
 
-// 	}
-// }
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'ru') {
+				window.location.href = 'advertisements_ru.html'
+			} else {
+				window.location.href = 'advertisements.html'
+			}
+		}
+
+	})
+} else if (window.location.pathname == '/advertisements_ru.html') {
+	document.addEventListener('click', function (event) {
+
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
+
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'bel') {
+				window.location.href = 'advertisements.html'
+			} else {
+				window.location.href = 'advertisements_ru.html'
+			}
+		}
+
+	})
+}
 
 
 

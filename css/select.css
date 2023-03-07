@@ -9,7 +9,7 @@
 	cursor: pointer;
 }
 .select__value {
-	width: 42px;
+	/* width: 42px; */
 	display: flex;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -52,7 +52,7 @@
 }
 .select__option {
 	cursor: pointer;
-	margin: 10px 0px;
+	padding: 5px 0px 0 0;
 }
 .select._active {
 	z-index: 5;
@@ -82,7 +82,7 @@
 		background-color: rgb(122, 91, 68);
 		margin: 21px 0px 0px 0px;
 		text-align: center;
-		padding: 14px 0px 10px 0px;
+		padding: 12px 0px 8px 0px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 	}
