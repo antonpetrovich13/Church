@@ -70,7 +70,7 @@
 		position: relative;
 		z-index: 20000;
 		background-color: #fff;
-		padding: 8px;
+		padding: 12px;
 		border-radius: 5px;
 	}
 
@@ -80,9 +80,9 @@
 
 	.select__option {
 		background-color: rgb(122, 91, 68);
-		margin: 13px 0px 0px 0px;
+		margin: 21px 0px 0px 0px;
 		text-align: center;
-		padding: 10px 0px 8px 0px;
+		padding: 14px 0px 10px 0px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 	}
