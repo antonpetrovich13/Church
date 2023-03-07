@@ -166,22 +166,6 @@
 				}
 
 			})
-		} else if (window.location.pathname == '/advertisements_ru.html') {
-			document.addEventListener('click', function (event) {
-
-				if (event.target.className === 'select__option') {
-					activeLink(event.target);
-				}
-
-				function activeLink(elem) {
-					if (elem.getAttribute('data-value') == 'bel') {
-						window.location.href = 'advertisements.html'
-					} else {
-						window.location.href = 'advertisements_ru.html'
-					}
-				}
-
-			})
 		}
 	</script>
 </body>
