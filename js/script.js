@@ -147,28 +147,31 @@ if (document.querySelector('.building__slider')) {
 
 //SLIDER PROJECTS
 if (document.documentElement.clientWidth <= 1100) {
-	document.querySelector('.projects__wrapper').classList.add('swiper-wrapper');
-	document.querySelectorAll('.projects__column').forEach(((el) => el.classList.add('swiper-slide')));
+	if (document.querySelector('.projects__wrapper')) {
+		document.querySelector('.projects__wrapper').classList.add('swiper-wrapper');
+		document.querySelectorAll('.projects__column').forEach(((el) => el.classList.add('swiper-slide')));
 
 
-	if (document.querySelector('.projects__body')) {
-		new Swiper('.projects__body', {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 800,
-			loop: true,
-			autoHeight: true,
-			pagination: {
-				el: '.projects__dotts',
-				clickable: true,
-			},
-			breakpoints: {
-				650: {
-					slidesPerView: 2,
+		if (document.querySelector('.projects__body')) {
+			new Swiper('.projects__body', {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				speed: 800,
+				loop: true,
+				autoHeight: true,
+				pagination: {
+					el: '.projects__dotts',
+					clickable: true,
+				},
+				breakpoints: {
+					650: {
+						slidesPerView: 2,
+					}
 				}
-			}
-		});
+			});
+		}
 	}
+
 }
 
 // COPY TEXT WHEN CLICKING ON '.payments-building__code'
@@ -259,6 +262,79 @@ if (document.querySelector('.life__button')) {
 		}
 	}
 }
+
+
+
+//СМЕНА ЯЗЫКА
+if (window.location.pathname == '/index.html') {
+	document.addEventListener('click', function (event) {
+
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
+
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'ru') {
+				window.location.href = 'index_ru.html'
+			} else {
+				window.location.href = 'index.html'
+			}
+		}
+
+	})
+} else if (window.location.pathname == '/index_ru.html') {
+	document.addEventListener('click', function (event) {
+
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
+
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'bel') {
+				window.location.href = 'index.html'
+			} else {
+				window.location.href = 'index_ru.html'
+			}
+		}
+
+	})
+}
+// ОПРЕДЕЛЕНИЕ АТКУАЛЬНОЙ СТРАНИЦЫ САЙТА, ИЗМЕНЕНИЕ ЯЗЫКА ДОКУМЕНТА НА СООТВЕТСВУЮЩЕЙ СТРАНИЦЕ
+if (window.location.pathname == '/advertisements.html') {
+	document.addEventListener('click', function (event) {
+
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
+
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'ru') {
+				window.location.href = 'advertisements_ru.html'
+			} else {
+				window.location.href = 'advertisements.html'
+			}
+		}
+
+	})
+} else if (window.location.pathname == '/advertisements_ru.html') {
+	document.addEventListener('click', function (event) {
+
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
+
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'bel') {
+				window.location.href = 'advertisements.html'
+			} else {
+				window.location.href = 'advertisements_ru.html'
+			}
+		}
+
+	})
+}
+
+
 
 
 
