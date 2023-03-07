@@ -267,7 +267,7 @@ if (document.querySelector('.life__button')) {
 
 //СМЕНА ЯЗЫКА
 document.addEventListener('click', function (event) {
-	if (window.location.pathname == '/index.html' || window.location.pathname == '/index_ru.html') {
+	if (window.location.pathname == 'index.html' || window.location.pathname == 'index_ru.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
@@ -283,7 +283,7 @@ document.addEventListener('click', function (event) {
 })
 
 document.addEventListener('click', function (event) {
-	if (window.location.pathname == '/advertisements.html' || window.location.pathname == '/advertisements_ru.html') {
+	if (window.location.pathname == 'advertisements.html' || window.location.pathname == 'advertisements_ru.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
