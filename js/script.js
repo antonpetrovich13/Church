@@ -266,9 +266,9 @@ if (document.querySelector('.life__button')) {
 
 
 //СМЕНА ЯЗЫКА
-if (window.location.pathname == '/index.html') {
-	document.addEventListener('click', function (event) {
 
+document.addEventListener('click', function (event) {
+	if (window.location.pathname == '/index.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
@@ -280,11 +280,7 @@ if (window.location.pathname == '/index.html') {
 				window.location.href = 'index.html'
 			}
 		}
-
-	})
-} else if (window.location.pathname == '/index_ru.html') {
-	document.addEventListener('click', function (event) {
-
+	} else if (window.location.pathname == '/index_ru.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
@@ -296,13 +292,7 @@ if (window.location.pathname == '/index.html') {
 				window.location.href = 'index_ru.html'
 			}
 		}
-
-	})
-}
-// ОПРЕДЕЛЕНИЕ АТКУАЛЬНОЙ СТРАНИЦЫ САЙТА, ИЗМЕНЕНИЕ ЯЗЫКА ДОКУМЕНТА НА СООТВЕТСВУЮЩЕЙ СТРАНИЦЕ
-if (window.location.pathname == '/advertisements.html') {
-	document.addEventListener('click', function (event) {
-
+	} else if (window.location.pathname == '/advertisements.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
@@ -314,10 +304,7 @@ if (window.location.pathname == '/advertisements.html') {
 				window.location.href = 'advertisements.html'
 			}
 		}
-
-	})
-} else if (window.location.pathname == '/advertisements_ru.html') {
-	document.addEventListener('click', function (event) {
+	} else if (window.location.pathname == '/advertisements_ru.html') {
 
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
@@ -330,9 +317,9 @@ if (window.location.pathname == '/advertisements.html') {
 				window.location.href = 'advertisements_ru.html'
 			}
 		}
+	}
+})
 
-	})
-}
 
 
 
