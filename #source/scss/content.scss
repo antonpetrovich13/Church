@@ -365,6 +365,12 @@
 			transform: translate(-50%, 0);
 			background-color: #fff;
 		}
+
+		&_bel {
+			&:before {
+				@include adaptiv-value('left', -20, -40, 1);
+			}
+		}
 	}
 
 	&__list {
@@ -447,7 +453,6 @@
 
 		@media(any-hover:hover) {
 			&:hover {
-				// background-color: rgb(209, 138, 81);
 				background-color: rgba(192, 148, 119, 0.651);
 
 				& p {
@@ -462,7 +467,6 @@
 		}
 
 	}
-
 
 
 	@media (max-width:1440px) {

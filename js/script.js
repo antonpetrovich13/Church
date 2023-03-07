@@ -260,6 +260,34 @@ if (document.querySelector('.life__button')) {
 	}
 }
 
+//СМЕНА ЯЗЫКА
+document.addEventListener('click', function (event) {
+
+	if (event.target.className === 'select__option') {
+		activeLink(event.target);
+	}
+
+	function activeLink(elem) {
+		if (elem.getAttribute('data-value') == 'ru') {
+			window.location.href = 'index_ru.html'
+		} else {
+			window.location.href = 'index.html'
+		}
+	}
+
+})
+
+
+// if (document.querySelector('.select__option')) {
+// 	let elem = document.querySelector('.select__option');
+// 	let selectValue = document.querySelector('.select__value');
+// 	let selectValueStyles = window.getComputedStyle(selectValue, ':before');
+// 	let arrow = selectValueStyles['content'];
+// 	if (elem.getAttribute('data-value') == 'ru') {
+
+// 	}
+// }
+
 
 
 

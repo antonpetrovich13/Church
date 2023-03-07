@@ -144,6 +144,10 @@
 
 	}
 
+	&__languages {
+		@include adaptiv-value('margin-left', 40, 0, 1);
+	}
+
 	@media (max-width: 1440px) {
 		&__logo {
 			font-size: 17px;
@@ -277,6 +281,14 @@
 
 		&__button {
 			@include adaptiv-value('margin-left', 0, 0, 1);
+			@include adaptiv-value('margin-left', 0, 0, 1);
+			@include adaptiv-value('margin-top', 40, 50, 1);
+		}
+
+		&__languages {
+			// background-color: #ffffff;
+			// padding: 8px 8px;
+			// border-radius: 5px;
 			@include adaptiv-value('margin-left', 0, 0, 1);
 			@include adaptiv-value('margin-top', 40, 50, 1);
 		}

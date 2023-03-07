@@ -1,0 +1,89 @@
+.select {
+	position: relative;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+.select__item {
+	position: relative;
+}
+.select__title {
+	cursor: pointer;
+}
+.select__value {
+	width: 42px;
+	display: flex;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #fff;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row-reverse;
+}
+.select__value span {
+	width: auto;
+	height: 1em;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.select__value::before {
+	content: attr(data-arrow);
+	margin: 0px 0px 0px 5px;
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	width: 6px;
+	height: 4px;
+	background: url("../img/arrow.png") center no-repeat;
+}
+
+.select__options {
+	display: none;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	min-width: 100%;
+	left: 0;
+	font-size: 16px;
+	margin: 15px 0px 0px 0px;
+	text-align: left;
+}
+.select__option {
+	cursor: pointer;
+	margin: 10px 0px;
+}
+.select._active {
+	z-index: 5;
+}
+.select._active .select__value::before {
+	transform: rotate(-180deg);
+}
+.select._active.select__options {
+	display: block;
+	background-color: #000;
+}
+
+@media (max-width: 1100px) {
+	.select__title {
+		position: relative;
+		z-index: 20000;
+		background-color: #fff;
+		padding: 8px;
+		border-radius: 5px;
+	}
+
+	.select__value {
+		color: #000;
+	}
+
+	.select__option {
+		background-color: rgb(122, 91, 68);
+		margin: 13px 0px 0px 0px;
+		text-align: center;
+		padding: 10px 0px 8px 0px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
