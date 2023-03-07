@@ -267,32 +267,30 @@ if (document.querySelector('.life__button')) {
 
 //СМЕНА ЯЗЫКА
 document.addEventListener('click', function (event) {
-	if (window.location.pathname == 'index.html' || window.location.pathname == 'index_ru.html') {
-		if (event.target.className === 'select__option') {
-			activeLink(event.target);
-		}
+	if (event.target.className === 'select__option') {
+		activeLink(event.target);
+	}
 
-		function activeLink(elem) {
-			if (elem.getAttribute('data-value') == 'ru') {
-				window.location.href = 'index_ru.html'
-			} else {
-				window.location.href = 'index.html'
-			}
+	function activeLink(elem) {
+		if (elem.getAttribute('data-value') == 'ru') {
+			window.location.href = 'index_ru.html'
+		} else {
+			window.location.href = 'index.html'
 		}
 	}
 })
 
 document.addEventListener('click', function (event) {
-	if (window.location.pathname == 'advertisements.html' || window.location.pathname == 'advertisements_ru.html') {
+	if (window.location.pathname == '/advertisements.html' || window.location.pathname == '/advertisements_ru.html') {
 		if (event.target.className === 'select__option') {
 			activeLink(event.target);
 		}
 
 		function activeLink(elem) {
 			if (elem.getAttribute('data-value') == 'ru') {
-				window.location.href = 'advertisements_ru.html'
+				window.location.pathname = '/advertisements_ru.html'
 			} else {
-				window.location.href = 'advertisements.html'
+				window.location.pathname = '/advertisements.html'
 			}
 		}
 	}
