@@ -260,57 +260,61 @@ if (document.querySelector('.life__button')) {
 	}
 }
 
+
+
 //СМЕНА ЯЗЫКА
-document.addEventListener('click', function (event) {
+// document.addEventListener('click', function (event) {
 
-	if (event.target.className === 'select__option') {
-		activeLink(event.target);
-	}
+// 	if (event.target.className === 'select__option') {
+// 		activeLink(event.target);
+// 	}
 
-	function activeLink(elem) {
-		if (elem.getAttribute('data-value') == 'ru') {
-			window.location.href = 'index_ru.html'
-		} else {
-			window.location.href = 'index.html'
-		}
-	}
+// 	function activeLink(elem) {
+// 		if (elem.getAttribute('data-value') == 'ru') {
+// 			window.location.href = 'index_ru.html'
+// 		} else {
+// 			window.location.href = 'index.html'
+// 		}
+// 	}
 
-})
+// })
 
 // ОПРЕДЕЛЕНИЕ АТКУАЛЬНОЙ СТРАНИЦЫ САЙТА, ИЗМЕНЕНИЕ ЯЗЫКА ДОКУМЕНТА НА СООТВЕТСВУЮЩЕЙ СТРАНИЦЕ
-// if (window.location.pathname == '/advertisements.html') {
-// 	document.addEventListener('click', function (event) {
+if (window.location.pathname == '/advertisements.html') {
+	document.addEventListener('click', function (event) {
 
-// 		if (event.target.className === 'select__option') {
-// 			activeLink(event.target);
-// 		}
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
 
-// 		function activeLink(elem) {
-// 			if (elem.getAttribute('data-value') == 'ru') {
-// 				window.location.href = 'advertisements_ru.html'
-// 			} else {
-// 				window.location.href = 'advertisements.html'
-// 			}
-// 		}
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'ru') {
+				window.location.href = 'advertisements_ru.html'
+			} else {
+				window.location.href = 'advertisements.html'
+			}
+		}
 
-// 	})
-// } else if (window.location.pathname == '/advertisements_ru.html') {
-// 	document.addEventListener('click', function (event) {
+	})
+} else if (window.location.pathname == '/advertisements_ru.html') {
+	document.addEventListener('click', function (event) {
 
-// 		if (event.target.className === 'select__option') {
-// 			activeLink(event.target);
-// 		}
+		if (event.target.className === 'select__option') {
+			activeLink(event.target);
+		}
 
-// 		function activeLink(elem) {
-// 			if (elem.getAttribute('data-value') == 'bel') {
-// 				window.location.href = 'advertisements.html'
-// 			} else {
-// 				window.location.href = 'advertisements_ru.html'
-// 			}
-// 		}
+		function activeLink(elem) {
+			if (elem.getAttribute('data-value') == 'bel') {
+				window.location.href = 'advertisements.html'
+			} else {
+				window.location.href = 'advertisements_ru.html'
+			}
+		}
 
-// 	})
-// }
+	})
+}
+
+
 
 
 
