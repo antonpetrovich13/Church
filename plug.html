@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="bel">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/select.css">
 	<link rel="shortcut icon" href="img/favicon.ico">
-	<title>Приход Милосердия Божьего и
-		Матери Божьей Остробрамской</title>
+	<title>Парафія Божай Міласэрнасці і Маці Божай Вастрабрамскай</title>
 	<meta name="description"
 		content="Католический приход Милосердия Божьего и Матери Божьей Остробрамской в городе Барановичи. Адрес: ул.Текстильная 28. По всем вопросам:+375297090093">
 	<meta name="keywords"
@@ -44,24 +44,29 @@
 		<header class="header header_noanimation">
 			<div class="header__wrapper header__wrapper_bg">
 				<a data-goto=".main" href="index.html" class="header__logo nav__link">
-					Приход Милосердия Божьего и
-					Матери Божьей Остробрамской
+					Парафія Божай Міласэрнасці<br>і Маці Божай Вастрабрамскай
 				</a>
 				<div class="header__burger">
 					<span></span>
 				</div>
 				<div class="header__main">
 					<ul class="header__menu">
-						<li><a href="index.html#schedule" data-goto=".schedule" class="header__link nav__link">Расписание
-								служений</a></li>
-						<li><a href="index.html#life" data-goto=".life" class="header__link nav__link">В приходе</a></li>
-						<li><a href="index.html#projects" data-goto=".schedule" class="header__link nav__link">Проекты</a>
+						<li><a href="index.html#schedule" data-goto=".schedule" class="header__link nav__link">Расклад
+								Імшаў</a></li>
+						<li><a href="index.html#life" data-goto=".life" class="header__link nav__link">У парафіі</a></li>
+						<li><a href="index.html#projects" data-goto=".schedule" class="header__link nav__link">Праекты</a>
 						</li>
-						<li><a href="" data-goto=".footer" class="header__link nav__link">Контакты</a></li>
+						<li><a href="" data-goto=".footer" class="header__link nav__link">Кантакты</a></li>
 					</ul>
 					<a href="advertisements.html" class="header__button">
-						<p>Объявления</p>
+						<p>Аб'явы</p>
 					</a>
+					<div class="header__languages">
+						<select name="" id="" class="header__lang">
+							<option class="option__bel" value="bel">BEL</option>
+							<option class="option__ru" value="ru">RU</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -70,8 +75,8 @@
 				<div class="plug__wrapper">
 					<div class="plug__body">
 						<div class="plug__main">
-							<div class="plug__title">Упс... <span>Страница находится в разработке</span> <span>Скоро здесь
-									появится актуальная информация)</span></div>
+							<div class="plug__title">Упс... <span>Старонка ў распрацоўцы</span> <span>Хутка тут з'явіцца
+									актуальная інфармацыя)</span></div>
 							<div class="plug__subtitle"></div>
 						</div>
 					</div>
@@ -87,20 +92,18 @@
 					<div class="footer__column footer__column_1">
 						<div class="footer__info">
 							<div class="footer__text">
-								Приход Милосердия Божьего и
-								Матери Божьей Остробрамской
-								в Барановичах
+								Парафія Божай Міласэрнасці і Маці Божай Вастрабрамскай
 							</div>
 							<div class="footer__adress">
-								ул. Текстильная 28, г.Барановичи, 225320
+								вул. Тэкстыльная 28, г.Баранавічы, 225320
 							</div>
 							<div class="footer__certificate">
 
-								<p>Свидетельство №829 от 06.06.2014 г.</p>
+								<p>Пасведчанне №829 ад 06.06.2014 г.</p>
 								<p>УНП 201024408.</p>
 							</div>
 							<div class="footer__bank">
-								<p>Банк - Приор Банк</p>
+								<p>Банк - Прыор Банк</p>
 								<p>р.с - BY48PJCB30155124211000000933</p>
 							</div>
 						</div>
@@ -108,13 +111,13 @@
 					<div class="footer__column footer__column_2">
 						<div class="footer__contacts">
 							<div class="footer__title">
-								Контакты
+								Кантакты
 							</div>
 							<div class="footer__number"><a href="tel:+375297090093">+375 29 709 00 93</a>
 							</div>
 							<div class="footer__mail"><a href="mailto:pavelocd@gmail.com">pavelocd@gmail.com</a></div>
 							<div class="footer__name">
-								кс. Павел Рудьман <span>настоятель прихода</span>
+								кс. Павел Рудзьман <span>пробашч парафіі</span>
 							</div>
 						</div>
 					</div>
@@ -123,6 +126,22 @@
 		</footer>
 	</div>
 	<script src="js/script.js"></script>
+	<script src="js/select.js"></script>
+	<script>
+		document.addEventListener('click', function (event) {
+			if (event.target.className === 'select__option') {
+				activeLink(event.target);
+			}
+
+			function activeLink(elem) {
+				if (elem.getAttribute('data-value') == 'ru') {
+					window.location.href = 'plug_ru.html'
+				} else {
+					window.location.href = 'plug.html'
+				}
+			}
+		})
+	</script>
 </body>
 
 </html>
