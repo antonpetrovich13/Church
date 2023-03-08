@@ -392,6 +392,21 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/select.js"></script>
 <script src="js/script.js"></script>
+	<script>
+		document.addEventListener('click', function (event) {
+			if (event.target.className === 'select__option') {
+				activeLink(event.target);
+			}
+
+			function activeLink(elem) {
+				if (elem.getAttribute('data-value') == 'ru') {
+					window.location.href = 'index_ru.html'
+				} else {
+					window.location.href = 'index.html'
+				}
+			}
+		})
+	</script>
 </body>
 
 </html>

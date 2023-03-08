@@ -280,54 +280,6 @@ if (document.querySelector('.life__button')) {
 // 	}
 // })
 
-// document.addEventListener('click', function (event) {
-// 	if (window.location.pathname == '/advertisements.html' || window.location.pathname == '/advertisements_ru.html') {
-// 		if (event.target.className === 'select__option') {
-// 			activeLink(event.target);
-// 		}
-
-// 		function activeLink(elem) {
-// 			if (elem.getAttribute('data-value') == 'ru') {
-// 				window.location.pathname = 'advertisements_ru.html'
-// 			} else {
-// 				window.location.pathname = 'advertisements.html'
-// 			}
-// 		}
-// 	}
-// })
-
-document.addEventListener('click', function (event) {
-
-	if (event.target.className === 'select__option') {
-		let currentLocation = window.location.pathname;
-
-
-		if (currentLocation === '/' || currentLocation === '/index.html' || currentLocation === '/index_ru.html') {
-			activeLink(event.target);
-
-			function activeLink(elem) {
-				if (elem.getAttribute('data-value') == 'ru') {
-					window.location.pathname = 'index_ru.html'
-				} else {
-					window.location.pathname = 'index.html'
-				}
-			}
-		} else if (currentLocation === '/advertisements.html' || currentLocation === '/advertisements_ru.html') {
-			activeLink(event.target);
-
-			function activeLink(elem) {
-				if (elem.getAttribute('data-value') == 'ru') {
-					window.location.pathname = 'advertisements_ru.html'
-				} else {
-					window.location.pathname = 'advertisements.html'
-				}
-			}
-		}
-
-
-	}
-})
-
 
 
 
