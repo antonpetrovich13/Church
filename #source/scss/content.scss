@@ -338,8 +338,9 @@
 		font-weight: bold;
 		color: #fff;
 		@include adaptiv-value('margin-bottom', 61, 35, 1);
-		@include adaptiv-value('font-size', 30, 20, 1);
+		@include adaptiv-value('font-size', 30, 22, 1);
 		@include adaptiv-value('letter-spacing', 5, 1, 1);
+		@include adaptiv-value('line-height', 32, 28, 1);
 	}
 
 	&__content {
