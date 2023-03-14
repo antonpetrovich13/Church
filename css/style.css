@@ -2726,6 +2726,17 @@ body {
       background-color: rgba(192, 148, 119, 0.514); }
     .advertisements__marker_less:after {
       width: 90%; }
+  .advertisements i {
+    display: block;
+    text-decoration: underline;
+    margin-top: 6px;
+    margin-bottom: 1px; }
+    @media (max-width: 1160px) {
+      .advertisements i {
+        margin-top: calc(10px + -4 * ((100vw - 320px) / 840)); } }
+    @media (max-width: 1160px) {
+      .advertisements i {
+        margin-bottom: calc(2px + -1 * ((100vw - 320px) / 840)); } }
 
 .plug {
   margin-top: 150px;

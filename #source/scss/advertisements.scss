@@ -23,6 +23,7 @@
 		@include adaptiv-value('margin-left', 20, 20, 1);
 	}
 
+
 	&__point {
 		position: relative;
 		font-weight: 500;
@@ -73,5 +74,10 @@
 		}
 	}
 
-
+	i {
+		display: block;
+		text-decoration: underline;
+		@include adaptiv-value('margin-top', 6, 10, 1);
+		@include adaptiv-value('margin-bottom', 1, 2, 1);
+	}
 }
