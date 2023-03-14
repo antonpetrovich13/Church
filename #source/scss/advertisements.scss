@@ -46,6 +46,13 @@
 			@include adaptiv-value('width', 8, 6, 1);
 			@include adaptiv-value('left', -20, -18, 1);
 		}
+
+		& i {
+			display: block;
+			text-decoration: underline;
+			@include adaptiv-value('margin-top', 6, 10, 1);
+			@include adaptiv-value('margin-bottom', 1, 2, 1);
+		}
 	}
 
 	&__marker {
@@ -74,10 +81,4 @@
 		}
 	}
 
-	i {
-		display: block;
-		text-decoration: underline;
-		@include adaptiv-value('margin-top', 6, 10, 1);
-		@include adaptiv-value('margin-bottom', 1, 2, 1);
-	}
 }
