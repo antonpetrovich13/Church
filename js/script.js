@@ -265,20 +265,44 @@ if (document.querySelector('.life__button')) {
 
 
 
-//СМЕНА ЯЗЫКА
-// document.addEventListener('click', function (event) {
-// 	if (event.target.className === 'select__option') {
-// 		activeLink(event.target);
-// 	}
+// СМЕНА ЯЗЫКА
+document.addEventListener('click', function (event) {
+	if (event.target.className === 'select__option') {
 
-// 	function activeLink(elem) {
-// 		if (elem.getAttribute('data-value') == 'ru') {
-// 			window.location.href = 'index_ru.html'
-// 		} else {
-// 			window.location.href = 'index.html'
-// 		}
-// 	}
-// })
+		let currentLocation = window.location.pathname;
+
+		switch (currentLocation) {
+			case '/index.html':
+				if (event.target.getAttribute('data-value') == 'ru') {
+					window.location.href = 'index_ru.html'
+				} else {
+					window.location.href = 'index.html'
+				}
+				break;
+			case '/index_ru.html':
+				if (event.target.getAttribute('data-value') == 'bel') {
+					window.location.href = 'index.html'
+				} else {
+					window.location.href = 'index_ru.html'
+				}
+				break;
+			case '/advertisements.html':
+				if (event.target.getAttribute('data-value') == 'ru') {
+					window.location.href = 'advertisements_ru.html'
+				} else {
+					window.location.href = 'advertisements.html'
+				}
+				break;
+			case '/advertisements_ru.html':
+				if (event.target.getAttribute('data-value') == 'bel') {
+					window.location.href = 'advertisements.html'
+				} else {
+					window.location.href = 'advertisements_ru.html'
+				}
+				break;
+		}
+	}
+})
 
 
 
