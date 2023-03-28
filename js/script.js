@@ -272,6 +272,13 @@ document.addEventListener('click', function (event) {
 		let currentLocation = window.location.pathname;
 
 		switch (currentLocation) {
+			case '/':
+				if (event.target.getAttribute('data-value') == 'ru') {
+					window.location.href = 'index_ru.html'
+				} else {
+					window.location.href = 'index.html'
+				}
+				break;
 			case '/index.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
 					window.location.href = 'index_ru.html'
