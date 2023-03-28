@@ -271,42 +271,42 @@ document.addEventListener('click', function (event) {
 
 		let currentLocation = window.location.pathname;
 
-		alert(currentLocation);
+		// alert(currentLocation);
 
 		switch (currentLocation) {
 			case '/':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.href = 'index_ru.html'
+					window.location.path = 'index_ru.html'
 				} else {
-					window.location.href = 'index.html'
+					window.location.path = 'index.html'
 				}
 				break;
 			case '/index.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.href = 'index_ru.html'
+					window.location.path = 'index_ru.html'
 				} else {
-					window.location.href = 'index.html'
+					window.location.path = 'index.html'
 				}
 				break;
 			case '/index_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location.href = 'index.html'
+					window.location.path = 'index.html'
 				} else {
-					window.location.href = 'index_ru.html'
+					window.location.path = 'index_ru.html'
 				}
 				break;
 			case '/advertisements.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.href = 'advertisements_ru.html'
+					window.location.path = 'advertisements_ru.html'
 				} else {
-					window.location.href = 'advertisements.html'
+					window.location.path = 'advertisements.html'
 				}
 				break;
 			case '/advertisements_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location.href = 'advertisements.html'
+					window.location.path = 'advertisements.html'
 				} else {
-					window.location.href = 'advertisements_ru.html'
+					window.location.path = 'advertisements_ru.html'
 				}
 				break;
 		}
