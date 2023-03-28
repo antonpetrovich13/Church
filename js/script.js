@@ -271,6 +271,8 @@ document.addEventListener('click', function (event) {
 
 		let currentLocation = window.location.pathname;
 
+		alert(currentLocation);
+
 		switch (currentLocation) {
 			case '/':
 				if (event.target.getAttribute('data-value') == 'ru') {
