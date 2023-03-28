@@ -276,37 +276,37 @@ document.addEventListener('click', function (event) {
 		switch (currentLocation) {
 			case '/':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.path = 'index_ru.html'
+					window.location = 'index_ru.html'
 				} else {
-					window.location.path = 'index.html'
+					window.location = 'index.html'
 				}
 				break;
 			case '/index.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.path = 'index_ru.html'
+					window.location = 'index_ru.html'
 				} else {
-					window.location.path = 'index.html'
+					window.location = 'index.html'
 				}
 				break;
 			case '/index_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location.path = 'index.html'
+					window.location = 'index.html'
 				} else {
-					window.location.path = 'index_ru.html'
+					window.location = 'index_ru.html'
 				}
 				break;
 			case '/advertisements.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location.path = 'advertisements_ru.html'
+					window.location = 'advertisements_ru.html'
 				} else {
-					window.location.path = 'advertisements.html'
+					window.location = 'advertisements.html'
 				}
 				break;
 			case '/advertisements_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location.path = 'advertisements.html'
+					window.location = 'advertisements.html'
 				} else {
-					window.location.path = 'advertisements_ru.html'
+					window.location = 'advertisements_ru.html'
 				}
 				break;
 		}
