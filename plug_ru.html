@@ -131,21 +131,6 @@
 	</div>
 	<script src="js/script.js"></script>
 	<script src="js/select.js"></script>
-	<script>
-		document.addEventListener('click', function (event) {
-			if (event.target.className === 'select__option') {
-				activeLink(event.target);
-			}
-
-			function activeLink(elem) {
-				if (elem.getAttribute('data-value') == 'bel') {
-					window.location.href = 'plug.html'
-				} else {
-					window.location.href = 'plug_ru.html'
-				}
-			}
-		})
-	</script>
 </body>
 
 </html>
