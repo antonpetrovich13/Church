@@ -276,37 +276,37 @@ document.addEventListener('click', function (event) {
 		switch (currentLocation) {
 			case '/':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location = 'index_ru.html'
+					window.location.href = 'index_ru.html'
 				} else {
-					window.location = 'index.html'
+					window.location.href = 'index.html'
 				}
 				break;
 			case '/index.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location = 'index_ru.html'
+					window.location.href = 'index_ru.html'
 				} else {
-					window.location = 'index.html'
+					window.location.href = 'index.html'
 				}
 				break;
 			case '/index_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location = 'index.html'
+					window.location.href = 'index.html'
 				} else {
-					window.location = 'index_ru.html'
+					window.location.href = 'index_ru.html'
 				}
 				break;
 			case '/advertisements.html':
 				if (event.target.getAttribute('data-value') == 'ru') {
-					window.location = 'advertisements_ru.html'
+					window.location.href = 'advertisements_ru.html'
 				} else {
-					window.location = 'advertisements.html'
+					window.location.href = 'advertisements.html'
 				}
 				break;
 			case '/advertisements_ru.html':
 				if (event.target.getAttribute('data-value') == 'bel') {
-					window.location = 'advertisements.html'
+					window.location.href = 'advertisements.html'
 				} else {
-					window.location = 'advertisements_ru.html'
+					window.location.href = 'advertisements_ru.html'
 				}
 				break;
 		}
